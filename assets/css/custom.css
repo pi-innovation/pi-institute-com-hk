@@ -1,1 +1,32 @@
 /* Add here all your css styles (customizations) */
+
+.g-pt-350 {
+    padding-top: 25rem !important;
+}
+
+/*------------------------------------
+  Highlight Color
+------------------------------------*/
+::-moz-selection {
+    color: #fff;
+    background-color: #2980B9; }
+
+::selection {
+    color: #fff;
+    background-color: #2980B9; }
+
+.g-bg-primary ::-moz-selection {
+    color: #2980B9;
+    background-color: #fff; }
+
+.g-bg-primary ::selection {
+    color: #2980B9;
+    background-color: #fff; }
+
+.g-bg-primary {
+    background-color: #2980B9 !important;
+}
+
+.g-color-primary {
+    color: #2980B9 !important;
+}
