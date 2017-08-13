@@ -30,3 +30,7 @@
 .g-color-primary {
     color: #2980B9 !important;
 }
+
+.bold {
+    font-weight: bold;
+}
