@@ -9,19 +9,23 @@
 ------------------------------------*/
 ::-moz-selection {
     color: #fff;
-    background-color: #2980B9; }
+    background-color: #2980B9;
+}
 
 ::selection {
     color: #fff;
-    background-color: #2980B9; }
+    background-color: #2980B9;
+}
 
 .g-bg-primary ::-moz-selection {
     color: #2980B9;
-    background-color: #fff; }
+    background-color: #fff;
+}
 
 .g-bg-primary ::selection {
     color: #2980B9;
-    background-color: #fff; }
+    background-color: #fff;
+}
 
 .g-bg-primary {
     background-color: #2980B9 !important;
@@ -37,4 +41,19 @@
 
 .img-fluid {
     width: 100%;
+}
+
+.quali-box {
+    text-align: center;
+}
+
+.media-logo {
+    height: 100%;
+    width: auto;
+    /*border: 1px solid black;*/
+}
+
+.center-align-media {
+    display: table;
+    margin: 0 auto;
 }
