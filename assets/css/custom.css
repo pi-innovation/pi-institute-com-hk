@@ -34,3 +34,7 @@
 .bold {
     font-weight: bold;
 }
+
+.img-fluid {
+    width: 100%;
+}
