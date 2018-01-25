@@ -7,12 +7,12 @@ angular.module('galleryApp', [])
                 cName: "中西區小學機械人大賽",
                 eName: "Central & Western District Primary Robotics Workshops cum Competitions",
                 photos: [
-                    'cwd/2.jpg',
-                    'cwd/4.jpg',
-                    'cwd/6.jpg',
-                    'cwd/9.jpg',
-                    'cwd/13.jpg',
-                    'cwd/15.jpg',
+                    'cwd/2.JPG',
+                    'cwd/4.JPG',
+                    'cwd/6.JPG',
+                    'cwd/9.JPG',
+                    'cwd/13.JPG',
+                    'cwd/15.JPG',
                     'cwd/IMG_3994.jpg',
                     'cwd/IMG_3995.JPG',
                     'cwd/IMG_3998.JPG'
