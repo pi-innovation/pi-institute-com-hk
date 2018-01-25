@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="galleryApp">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="../assets/js/gallery.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110577620-1"></script>
     <script>
@@ -203,156 +205,25 @@
     <!-- End Header -->
 
     <!-- Partners -->
-    <section class="1g-bg-secondary">
+    <section class="1g-bg-secondary" ng-controller="GalleryController as gallery">
         <div class="container g-py-30">
             <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
-                <h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600 text-uppercase">相簿</h1>
+                <h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600">Gallery</h1>
             </header>
-            <div class="g-mb-20" id="cwd">
-                <h2 class="h3 g-color-black">中西區小學機械人大賽</h2>
-            </div>
 
-            <div class="row g-mb-30">
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/cwd/IMG_3994.jpg" alt="中西區小學機械人大賽花䋈">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/cwd/IMG_3995.JPG" alt="中西區小學機械人大賽花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/cwd/IMG_3998.JPG" alt="中西區小學機械人大賽花絮">
-                </div>
-            </div>
 
-            <div class="g-mb-20">
-                <h2 class="h3 g-color-black">數碼港機械人工作坊</h2>
-            </div>
+            <div ng-repeat="album in gallery.albums">
+                <div class="g-mb-20">
+                    <h2 class="h3 g-color-black">{{album.cName}}</h2>
+                </div>
 
-            <div class="row g-mb-30">
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/cyberport/IMG_3836.JPG" alt="數碼港機械人工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/cyberport/IMG_3838.JPG" alt="數碼港機械人工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/cyberport/IMG_3839.JPG" alt="數碼港機械人工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/cyberport/IMG_3845.JPG" alt="數碼港機械人工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/cyberport/IMG_3847.JPG" alt="數碼港機械人工作坊花絮">
+                <div class="row g-mb-30">
+                    <div class="col-md-3 g-mb-20" ng-repeat="photo in album.photos">
+                        <img class="img-fluid" ng-src="../assets/img/gallery/{{photo}}" alt="{{album.cName}} Highlights">
+                    </div>
                 </div>
             </div>
 
-            <div class="g-mb-20">
-                <h2 class="h3 g-color-black">人型機械人舞蹈比賽</h2>
-            </div>
-
-            <div class="row g-mb-30">
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/humanoid-dance/P5240739.JPG" alt="人型機械人舞蹈比賽花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/humanoid-dance/P5240742.JPG" alt="人型機械人舞蹈比賽花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/humanoid-dance/P5240746.JPG" alt="人型機械人舞蹈比賽花絮">
-                </div>
-            </div>
-
-            <div class="g-mb-20">
-                <h2 class="h3 g-color-black" id="humanoid-workshop">人型機械人製作工作坊</h2>
-            </div>
-
-            <div class="row g-mb-30">
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/humanoid-workshop/IMG_1855.JPG" alt="人型機械人製作工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/humanoid-workshop/IMG_1856.jpg" alt="人型機械人製作工作坊花絮">
-                </div>
-            </div>
-
-            <div class="g-mb-20">
-                <h2 class="h3 g-color-black" id="dahsing">大新人壽LEGO機械車工作坊</h2>
-            </div>
-
-            <div class="row g-mb-30">
-                <div class="col-md-4 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/dahsing/IMG_2640.JPG" alt="大新人壽LEGO機械車工作坊花絮">
-                </div>
-                <div class="col-md-4 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/dahsing/IMG_2668.JPG" alt="大新人壽LEGO機械車工作坊花絮">
-                </div>
-                <div class="col-md-4 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/dahsing/IMG_2675.JPG" alt="大新人壽LEGO機械車工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/dahsing/IMG_2683.JPG" alt="大新人壽LEGO機械車工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/dahsing/IMG_2691.JPG" alt="大新人壽LEGO機械車工作坊花絮">
-                </div>
-            </div>
-
-            <div class="g-mb-20">
-                <h2 class="h3 g-color-black" id="jcps-experience-day">香港教育大學賽馬會小學STEM體驗日</h2>
-            </div>
-
-            <div class="row g-mb-30">
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jcps-experience-day/IMG-20130531-WA0008.jpg" alt="香港教育大學賽馬會小學STEM體驗日花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jcps-experience-day/IMG-20130623-WA0007.jpg" alt="香港教育大學賽馬會小學STEM體驗日花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jcps-experience-day/IMG_6993.JPG" alt="香港教育大學賽馬會小學STEM體驗日花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jcps-experience-day/IMG_6995.JPG" alt="香港教育大學賽馬會小學STEM體驗日花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jcps-experience-day/IMG_7004.JPG" alt="香港教育大學賽馬會小學STEM體驗日花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jcps-experience-day/IMG_7009.JPG" alt="香港教育大學賽馬會小學STEM體驗日花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jcps-experience-day/IMG_7010.jpeg" alt="香港教育大學賽馬會小學STEM體驗日花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jcps-experience-day/IMG_7011.jpeg" alt="香港教育大學賽馬會小學STEM體驗日花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jcps-experience-day/IMG-20130531-WA0007.jpg" alt="香港教育大學賽馬會小學STEM體驗日花絮">
-                </div>
-            </div>
-
-            <div class="g-mb-20">
-                <h2 class="h3 g-color-black">佐敦谷聖若瑟天主教小學六足機械人足球工作坊</h2>
-            </div>
-
-            <div class="row g-mb-30">
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jvsj-6-leg-workshop/IMG_1448.JPG" alt="佐敦谷聖若瑟天主教小學六足機械人足球工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jvsj-6-leg-workshop/IMG_1482.JPG" alt="佐敦谷聖若瑟天主教小學六足機械人足球工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jvsj-6-leg-workshop/IMG_1664.JPG" alt="佐敦谷聖若瑟天主教小學六足機械人足球工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jvsj-6-leg-workshop/IMG_1748.JPG" alt="佐敦谷聖若瑟天主教小學六足機械人足球工作坊花絮">
-                </div>
-                <div class="col-md-3 g-mb-20">
-                    <img class="img-fluid" src="../assets/img/gallery/jvsj-6-leg-workshop/IMG_5999.JPG" alt="佐敦谷聖若瑟天主教小學六足機械人足球工作坊花絮">
-                </div>
-
-            </div>
         </div>
     </section>
     <!-- End Partners -->
