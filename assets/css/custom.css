@@ -58,6 +58,18 @@
     margin: 0 auto;
 }
 
-.lang-select-link{
- display: inline-block;
+.lang-select-link {
+    display: inline-block;
+}
+
+a:focus, a:hover {
+    color: #2980B9 !important
+}
+
+.card-small-text{
+    font-weight: 400!important;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    line-height: 1.6!important;
+    color: #555!important;
+    -webkit-font-smoothing: antialiased;
 }
