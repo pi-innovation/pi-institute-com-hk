@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh" ng-app="piApp.controllers">
+<html lang="en" ng-app="piApp.controllers">
 <head>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -32,9 +32,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Pi Innovation團隊於自2012年起致力於學界推動STEM及創新教育，為學校、非牟利機構、以至政府部門安排度身訂造的課程及工作坊，
-    讓更多的同學有機會接觸創新科技。我們為各類機構提供STEM課程，內容涵蓋機械人、編程、科學實驗、創意思維、設計思維、邏輯思考等等。我們亦可為針對學校的需要特別設計課程，配合學校及學生的需要。
-    同時我們亦為學校提供校本STEM計劃顧問服務，免費為學校規劃STEM教育專案及藍圖。">
+    <meta name="description" content="Pi Innovation Team has started promoting STEM and innovation education since 2012. We provide customized courses and workshops for schools,
+    NGOs and government divisions. Our onsite education services covered robotics, coding, science experiments, design thinking, logical thinking and a lot more. Hoping to provide more STEM learning opportunities
+    for our next generation, we also provided free school-based STEM project consultations for schools on their STEM development plans.">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../favicon.ico">
@@ -103,7 +103,7 @@
                          id="navBar" ng-controller="MenuController as menuItems">
                         <ul class="navbar-nav g-pos-rel g-font-weight-600 ml-auto">
                             <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items" ng-class="{'hidden-sm-up': item.mobileOnly}">
-                                <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.cName}}</a>
+                                <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.eName}}</a>
                             </li>
 
                             <li class="nav-item g-mx-10--lg g-mx-15--xl">
@@ -130,7 +130,7 @@
                 <div class="col-lg-6 align-self-center g-mb-0--lg">
                     <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
                         <h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600">
-                            夏令營</h1>
+                            Summer Camps</h1>
                     </header>
                 </div>
             </div>
@@ -140,28 +140,27 @@
                     <article class="u-shadow-v1-5 g-line-height-2 g-transition-0_3">
                         <a href="app_camp.html">
                             <img class="img-fluid w-100 g-rounded-top-5"
-                                 ng-src="../assets/banner/{{course.image}}"
-                                 alt="Robotics Foundations Course">
+                                 ng-src="../assets/banner/{{course.image}}">
                             <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
 
                                 <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                    {{course.cName}}
+                                    {{course.eName}}
                                 </h2>
 
 
                                 <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                    <li class="list-inline-item mr-0">課程教材</li>
+                                    <li class="list-inline-item mr-0">Course Materials</li>
                                 </ul>
 
                                 <ul class="list-inline g-font-size-16 mb-0">
                                     <li class="list-inline-item g-mb-10 card-small-text"
                                         style="padding-bottom: 5px">
-                                        {{course.cMaterial}}
+                                        {{course.eMaterial}}
                                     </li>
                                 </ul>
 
                                 <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                    <li class="list-inline-item mr-0">適合年齡</li>
+                                    <li class="list-inline-item mr-0">Age</li>
                                 </ul>
 
                                 <ul class="list-inline g-font-size-16 mb-0">
@@ -172,19 +171,19 @@
                                 </ul>
 
                                 <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                    <li class="list-inline-item mr-0">費用</li>
+                                    <li class="list-inline-item mr-0">Program Fee</li>
                                 </ul>
 
                                 <ul class="list-inline g-font-size-16 mb-0">
                                     <li class="list-inline-item g-mb-10 card-small-text"
                                         style="padding-bottom: 5px">
-                                        {{course.fee}}
+                                        {{course.efee}}
                                     </li>
                                 </ul>
 
                                 <ul class="list-inline g-font-size-16 mb-0">
                                     <a class="btn u-btn-primary g-rounded-50" ng-href="{{course.detailslink}}">
-                                        詳情
+                                        Details
                                     </a>
                                 </ul>
                             </div>
@@ -196,35 +195,35 @@
                                     <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
 
                                         <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                            {{class.idName}}<br>({{class.id}})
+                                            {{class.eIdName}}<br>({{class.id}})
                                         </h2>
 
 
                                         <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                            <li class="list-inline-item mr-0">日期</li>
+                                            <li class="list-inline-item mr-0">Date/Time</li>
                                         </ul>
 
                                         <ul class="list-inline g-font-size-16 mb-0">
                                             <li class="list-inline-item g-mb-10 card-small-text"
                                                 style="padding-bottom: 5px">
-                                                {{class.date}}<br>{{class.time}}
+                                                {{class.eDate}}<br>{{class.time}}
                                             </li>
                                         </ul>
 
                                         <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                            <li class="list-inline-item mr-0">地點</li>
+                                            <li class="list-inline-item mr-0">Location</li>
                                         </ul>
 
                                         <ul class="list-inline g-font-size-16 mb-0">
                                             <li class="list-inline-item g-mb-10 card-small-text"
                                                 style="padding-bottom: 5px">
-                                                {{class.location}}
+                                                {{class.eLocation}}
                                             </li>
                                         </ul>
 
                                         <ul class="list-inline g-font-size-16 mb-0">
                                             <a class="btn btn-block u-btn-primary g-rounded-50" ng-href="{{class.registerLink}}" target="_blank">
-                                                <i class="fa fa-bolt g-mr-5"></i>立即報名
+                                                <i class="fa fa-bolt g-mr-5"></i>Register Now
                                             </a>
                                         </ul>
 
@@ -243,12 +242,12 @@
                         <!--Basic Table-->
                         <div class="table-responsive">
                             <table class="table table-bordered u-table--v2">
-                                <thead class="text-uppercase g-letter-spacing-1">
+                                <thead class="g-letter-spacing-1">
                                 <tr>
-                                    <th class="g-font-weight-300 g-color-black">班別編號</th>
-                                    <th class="g-font-weight-300 g-color-black g-min-width-200">日期／時間</th>
-                                    <th class="g-font-weight-300 g-color-black g-min-width-200">時間</th>
-                                    <th class="g-font-weight-300 g-color-black">報名</th>
+                                    <th class="g-font-weight-300 g-color-black">Class</th>
+                                    <th class="g-font-weight-300 g-color-black g-min-width-200">Date/Time</th>
+                                    <th class="g-font-weight-300 g-color-black g-min-width-200">Location</th>
+                                    <th class="g-font-weight-300 g-color-black">Registration</th>
                                 </tr>
                                 </thead>
 
@@ -259,17 +258,17 @@
                                         <h4 class="h6 g-mb-2">{{class.id}}</h4>
                                     </td>
                                     <td class="align-middle">
-                                        {{class.date}}<br>{{class.time}}
+                                        {{class.eDate}}<br>{{class.time}}
                                     </td>
                                     <td class="align-middle">
                                         <div class="d-flex">
                                             <i class="icon-location-pin g-font-size-18 g-color-gray-dark-v5 g-pos-rel g-top-5 g-mr-7"></i>
-                                            <span>{{class.location}}</span>
+                                            <span>{{class.eLocation}}</span>
                                         </div>
                                     </td>
                                     <td class="align-middle">
                                         <a class="btn btn-block u-btn-primary g-rounded-50 g-py-5" ng-href="{{class.registerLink}}">
-                                            <i class="fa fa-bolt g-mr-5"></i> 立即報名
+                                            <i class="fa fa-bolt g-mr-5"></i> Register Now
                                         </a>
                                     </td>
                                 </tr>
