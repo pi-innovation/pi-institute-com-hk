@@ -1,5 +1,5 @@
-angular.module('galleryApp', [])
-    .controller('GalleryController', function () {
+angular.module('piApp.controllers')
+    .controller('GalleryController', ['$scope', function ($scope) {
 
         var gallery = this;
         gallery.albums = [
@@ -109,4 +109,4 @@ angular.module('galleryApp', [])
         ]
 
 
-    });
+    }]);

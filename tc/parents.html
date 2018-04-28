@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh" ng-app="parentsApp">
+<html lang="zh" ng-app="piApp.controllers">
 <head>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,6 +10,8 @@
     <!-- End Google Tag Manager -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="../assets/js/piApp.js"></script>
+    <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/parents.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110577620-1"></script>
@@ -98,52 +100,22 @@
 
                     <!-- Navigation -->
                     <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg"
-                         id="navBar">
+                         id="navBar" ng-controller="MenuController as menuItems">
                         <ul class="navbar-nav text-uppercase g-pos-rel g-font-weight-600 ml-auto">
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="index.html" class="nav-link g-py-7 g-px-0">首頁</a>
+                            <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items">
+                                <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.cName}}</a>
                             </li>
 
                             <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="parents.html"
-                                   class="nav-link g-py-7 g-px-0 g-color-primary">家長專區</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="course.html" class="nav-link g-py-7 g-px-0">學校課程</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="achievement.html" class="nav-link g-py-7 g-px-0">資歷及佳績</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="portfolio.html" class="nav-link g-py-7 g-px-0">過往專案</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="partners.html" class="nav-link g-py-7 g-px-0">客戶／合作夥伴</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="gallery.html" class="nav-link g-py-7 g-px-0">相簿</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="contact.html" class="nav-link g-py-7 g-px-0">聯絡我們</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="./course.html"
-                                   class="nav-link g-py-7 g-px-0 lang-select-link g-color-primary">中</a>
+                                <a ng-href="../tc/{{currentItem()}}"
+                                   class="nav-link g-py-7 g-px-0 lang-select-link" ng-class="getClassForLang('tc')">中</a>
                                 <span class="nav-link g-py-7 g-px-0 lang-select-link">/</span>
-                                <a href="../en/course.html"
-                                   class="nav-link g-py-7 g-px-0 lang-select-link">EN</a>
+                                <a ng-href="../en/{{currentItem()}}"
+                                   class="nav-link g-py-7 g-px-0 lang-select-link" ng-class="getClassForLang('en')">EN</a>
                             </li>
                         </ul>
                     </div>
                     <!-- End Navigation -->
-
 
                 </div>
             </nav>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="piApp.controllers">
 <head>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,7 +10,8 @@
     <!-- End Google Tag Manager -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
-    <script src="../assets/js/parents.js"></script>
+    <script src="../assets/js/piApp.js"></script>
+    <script src="../assets/js/menu.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110577620-1"></script>
     <script>
@@ -93,41 +94,18 @@
 
                     <!-- Navigation -->
                     <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg"
-                         id="navBar">
-                        <ul class="navbar-nav g-pos-rel g-font-weight-600 ml-auto">
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="../index.html" class="nav-link g-py-7 g-px-0">Explore</a>
+                         id="navBar" ng-controller="MenuController as menuItems">
+                        <ul class="navbar-nav text-uppercase g-pos-rel g-font-weight-600 ml-auto">
+                            <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items">
+                                <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.eName}}</a>
                             </li>
 
                             <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="course.html" class="nav-link g-py-7 g-px-0 g-color-primary">Courses</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="achievement.html"
-                                   class="nav-link g-py-7 g-px-0">Qualifications</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="portfolio.html" class="nav-link g-py-7 g-px-0">Past Projects</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="partners.html" class="nav-link g-py-7 g-px-0">Clients & Partners</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="gallery.html" class="nav-link g-py-7 g-px-0">Gallery</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="contact.html" class="nav-link g-py-7 g-px-0">Contact</a>
-                            </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a href="../tc/course.html" class="nav-link g-py-7 g-px-0 lang-select-link">中</a>
+                                <a ng-href="../tc/{{currentItem()}}"
+                                   class="nav-link g-py-7 g-px-0 lang-select-link" ng-class="getClassForLang('tc')">中</a>
                                 <span class="nav-link g-py-7 g-px-0 lang-select-link">/</span>
-                                <a href="./course.html" class="nav-link g-py-7 g-px-0 lang-select-link g-color-primary">EN</a>
+                                <a ng-href="../en/{{currentItem()}}"
+                                   class="nav-link g-py-7 g-px-0 lang-select-link" ng-class="getClassForLang('en')">EN</a>
                             </li>
                         </ul>
                     </div>
@@ -617,7 +595,6 @@
 
 <!-- JS Unify -->
 <script src="../assets/js/hs.core.js"></script>
-<script src="../assets/js/components/hs.carousel.js"></script>
 <script src="../assets/js/components/hs.header.js"></script>
 <script src="../assets/js/helpers/hs.hamburgers.js"></script>
 <script src="../assets/js/components/hs.tabs.js"></script>
@@ -631,8 +608,6 @@
 <!-- JS Plugins Init. -->
 <script>
   $(document).on('ready', function () {
-    // initialization of carousel
-    $.HSCore.components.HSCarousel.init('.js-carousel');
 
     // initialization of tabs
     $.HSCore.components.HSTabs.init('[role="tablist"]');

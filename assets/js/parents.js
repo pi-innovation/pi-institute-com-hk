@@ -1,5 +1,5 @@
-angular.module('parentsApp', [])
-    .controller('ParentsController', function () {
+angular.module('piApp.controllers')
+    .controller('ParentsController', ['$scope', function ($scope) {
 
         var parents = this;
         parents.courses = [
@@ -36,4 +36,4 @@ angular.module('parentsApp', [])
         ]
 
 
-    });
+    }]);
