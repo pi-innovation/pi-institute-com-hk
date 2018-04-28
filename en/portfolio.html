@@ -93,7 +93,7 @@
               <!-- Navigation -->
               <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg"
                    id="navBar" ng-controller="MenuController as menuItems">
-                <ul class="navbar-nav text-uppercase g-pos-rel g-font-weight-600 ml-auto">
+                <ul class="navbar-nav g-pos-rel g-font-weight-600 ml-auto">
                   <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items">
                     <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.eName}}</a>
                   </li>
