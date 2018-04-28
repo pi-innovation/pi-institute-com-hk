@@ -7,36 +7,39 @@ angular.module('piApp.controllers')
         cName: '首頁',
         eName: 'Explore',
         link: 'index.html',
+        mobileOnly: false,
       },
       {
         cName: '家長專區',
         eName: 'Parents',
         link: 'parents.html',
+        mobileOnly: false,
       },
       {
         cName: '學校課程',
         eName: 'Schools',
         link: 'course.html',
+        mobileOnly: false,
       }, {
         cName: '資歷及佳績',
         eName: 'Qualifications',
         link: 'achievement.html',
+        mobileOnly: false,
       }, {
         cName: '過往專案',
         eName: 'Portfolio',
         link: 'portfolio.html',
+        mobileOnly: true,
       }, {
         cName: '客戶／合作夥伴',
         eName: 'Clients & Partners',
         link: 'partners.html',
-      }, {
-        cName: '相簿',
-        eName: 'Gallery',
-        link: 'gallery.html',
+        mobileOnly: false,
       }, {
         cName: '聯絡我們',
         eName: 'Contact',
         link: 'contact.html',
+        mobileOnly: false,
       }
     ];
 

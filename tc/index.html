@@ -103,7 +103,7 @@
               <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg"
                    id="navBar" ng-controller="MenuController as menuItems">
                 <ul class="navbar-nav text-uppercase g-pos-rel g-font-weight-600 ml-auto">
-                  <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items">
+                  <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items" ng-class="{'hidden-sm-up': item.mobileOnly}">
                     <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.cName}}</a>
                   </li>
 
@@ -141,6 +141,18 @@
         </div>
       </section>
       <!-- End Promo Block -->
+
+      <section class="g-bg-teal">
+        <div class="container g-py-20">
+          <div class="d-flex justify-content-between">
+            <h3 class="h5 align-self-center g-color-white mb-0 mr-4">想更直接了解我們的課程精華及活動內容？</h3>
+            <div>
+              <a class="align-self-center btn btn-xl u-btn-outline-white g-font-size-default g-mr-10 hidden-sm-down" href="portfolio.html">過往專案</a>
+              <a class="align-self-center btn btn-xl u-btn-outline-white g-font-size-default" href="gallery.html">活動相簿</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Icon Blocks -->
       <section class="container g-pt-50 g-pb-30">

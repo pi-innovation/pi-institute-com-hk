@@ -73,3 +73,7 @@ a:focus, a:hover {
     color: #555!important;
     -webkit-font-smoothing: antialiased;
 }
+
+.g-bg-teal {
+    background-color: #2980B9 !important;
+}
