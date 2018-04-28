@@ -1,51 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W2ZZMFW');</script>
+    <!-- End Google Tag Manager -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="../assets/js/parents.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110577620-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      window.dataLayer = window.dataLayer || []
 
-      gtag('config', 'UA-110577620-1');
-    </script>
+      function gtag () {dataLayer.push(arguments)}
 
-    <!-- Start of Async Drift Code -->
-    <script>
-      !function() {
-        var t;
-        if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
-          t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-          t.factory = function(e) {
-            return function() {
-              var n;
-              return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
-            };
-          }, t.methods.forEach(function(e) {
-          t[e] = t.factory(e);
-        }), t.load = function(t) {
-          var e, n, o, i;
-          e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
-            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
-            n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
-        });
-      }();
-      drift.SNIPPET_VERSION = '0.3.1';
-      drift.load('4dad4atwhiv5');
-    </script>
-    <!-- End of Async Drift Code -->
+      gtag('js', new Date())
 
-    <!-- Hotjar Tracking Code for www.pi-innovation.com.hk -->
-    <script>
-      (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:711160,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      gtag('config', 'UA-110577620-1')
     </script>
 
     <!-- Title -->
@@ -61,14 +36,6 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../favicon.ico">
-
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C500%2C600%2C700">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair+Display">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Spectral">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Rubik">
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
