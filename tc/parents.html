@@ -138,7 +138,7 @@
             <div class="row" style="margin-bottom: 50px;" ng-repeat="course in parents.courses">
                 <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
                     <article class="u-shadow-v1-5 g-line-height-2 g-transition-0_3">
-                        <a href="app_camp.html">
+                        <a ng-href="{{course.detailslink}}">
                             <img class="img-fluid w-100 g-rounded-top-5"
                                  ng-src="../assets/banner/{{course.image}}"
                                  alt="Robotics Foundations Course">
@@ -247,7 +247,7 @@
                                 <tr>
                                     <th class="g-font-weight-300 g-color-black">班別編號</th>
                                     <th class="g-font-weight-300 g-color-black g-min-width-200">日期／時間</th>
-                                    <th class="g-font-weight-300 g-color-black g-min-width-200">時間</th>
+                                    <th class="g-font-weight-300 g-color-black g-min-width-200">地點</th>
                                     <th class="g-font-weight-300 g-color-black">報名</th>
                                 </tr>
                                 </thead>
