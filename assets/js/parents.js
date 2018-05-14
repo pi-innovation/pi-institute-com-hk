@@ -11,8 +11,8 @@ angular.module('piApp.controllers')
         cMaterial: 'Scratch',
         eMaterial: 'Scratch',
         age: '8-12',
-        fee: 'HKD 3900 (早鳥優惠 HKD 3500)',
-        efee: 'HKD 3900 (Early Bird@HKD 3500)',
+        fee: 'HKD 3900 (5月31日前報名，可獲早鳥優惠 HKD 3500)',
+        efee: 'HKD 3900 (Early Bird@HKD 3500 before 31st May)',
         classes: [
           {
             id: '2018-SCR-SUMMER-01',
@@ -57,8 +57,8 @@ angular.module('piApp.controllers')
         cMaterial: 'MIT App Inventor',
         eMaterial: 'MIT App Inventor',
         age: '8-12',
-        fee: 'HKD 3900 (早鳥優惠 HKD 3500)',
-        efee: 'HKD 3900 (Early Bird@HKD 3500)',
+        fee: 'HKD 3900 (5月31日前報名，可獲早鳥優惠 HKD 3500)',
+        efee: 'HKD 3900 (Early Bird@HKD 3500 before 31st May)',
         classes: [
           {
             id: '2018-APP-SUMMER-01',
