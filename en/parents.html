@@ -123,6 +123,162 @@
     </header>
     <!-- End Header -->
 
+    <!-- About Our Day Camps -->
+    <section class="1g-bg-secondary g-py-30" ng-controller="ParentsController as parents">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center g-mb-0--lg">
+                    <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
+                        <h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600">
+                            Summer Day Camps</h1>
+                    </header>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 50px;" ng-repeat="course in parents.dayCourses">
+                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
+                    <article class="u-shadow-v1-5 g-line-height-2 g-transition-0_3">
+                        <a ng-href="{{course.detailslink}}">
+                            <img class="img-fluid w-100 g-rounded-top-5"
+                                 ng-src="../assets/banner/{{course.image}}"
+                                 alt="Robotics Foundations Course">
+                            <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
+
+                                <h2 class="h5 g-color-black g-font-weight-600 mb-4">
+                                    {{course.eName}}
+                                </h2>
+
+
+                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
+                                    <li class="list-inline-item mr-0">Course Materials</li>
+                                </ul>
+
+                                <ul class="list-inline g-font-size-16 mb-0">
+                                    <li class="list-inline-item g-mb-10 card-small-text"
+                                        style="padding-bottom: 5px">
+                                        {{course.eMaterial}}
+                                    </li>
+                                </ul>
+
+                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
+                                    <li class="list-inline-item mr-0">Age</li>
+                                </ul>
+
+                                <ul class="list-inline g-font-size-16 mb-0">
+                                    <li class="list-inline-item g-mb-10 card-small-text"
+                                        style="padding-bottom: 5px">
+                                        {{course.age}}
+                                    </li>
+                                </ul>
+
+                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
+                                    <li class="list-inline-item mr-0">Fee</li>
+                                </ul>
+
+                                <ul class="list-inline g-font-size-16 mb-0">
+                                    <li class="list-inline-item g-mb-10 card-small-text"
+                                        style="padding-bottom: 5px">
+                                        {{course.efee}}
+                                    </li>
+                                </ul>
+
+                                <ul class="list-inline g-font-size-16 mb-0">
+                                    <a class="btn u-btn-primary g-rounded-50" ng-href="{{course.detailslink}}">
+                                        Details
+                                    </a>
+                                </ul>
+
+                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0 hidden-sm-up">
+                                    <li class="list-inline-item mr-0">Registration</li>
+                                </ul>
+                                <div class="hidden-sm-up" ng-bind-html="course.paymentButton"></div>
+
+                            </div>
+                        </a>
+
+                        <div class="col-lg-4 col-md-6 g-pb-15 g-mb-0--lg hidden-sm-up" ng-repeat="class in course.classes">
+                            <article class="u-shadow-v2 g-brd-around g-brd-gray-light-v4 g-line-height-2  g-transition-0_3">
+                                <a href="#">
+                                    <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
+
+                                        <h2 class="h5 g-color-black g-font-weight-600 mb-4">
+                                            {{class.idName}}<br>({{class.id}})
+                                        </h2>
+
+
+                                        <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
+                                            <li class="list-inline-item mr-0">Date</li>
+                                        </ul>
+
+                                        <ul class="list-inline g-font-size-16 mb-0">
+                                            <li class="list-inline-item g-mb-10 card-small-text"
+                                                style="padding-bottom: 5px">
+                                                {{class.date}}<br>{{class.time}}
+                                            </li>
+                                        </ul>
+
+                                        <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
+                                            <li class="list-inline-item mr-0">Location</li>
+                                        </ul>
+
+                                        <ul class="list-inline g-font-size-16 mb-0">
+                                            <li class="list-inline-item g-mb-10 card-small-text"
+                                                style="padding-bottom: 5px">
+                                                {{class.location}}
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </a>
+
+                            </article>
+                        </div>
+
+                    </article>
+                </div>
+
+                <div class="col-lg-8 col-md-6 g-mb-30 g-mb-0--lg hidden-sm-down">
+
+                    <div class="shortcode-html">
+                        <!--Basic Table-->
+                        <div class="table-responsive">
+                            <table class="table table-bordered u-table--v2">
+                                <thead class="text-uppercase g-letter-spacing-1">
+                                <tr>
+                                    <th class="g-font-weight-300 g-color-black g-min-width-200">Date/Time</th>
+                                    <th class="g-font-weight-300 g-color-black g-min-width-200">Location</th>
+                                    <th class="g-font-weight-300 g-color-black">Registration</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+
+                                <tr ng-repeat="class in course.classes">
+                                    <td class="align-middle text-nowrap">
+                                        {{class.eDate}}<br>{{class.time}}
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="d-flex">
+                                            <i class="icon-location-pin g-font-size-18 g-color-gray-dark-v5 g-pos-rel g-top-5 g-mr-7"></i>
+                                            <span>{{class.eLocation}}</span>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle" style="text-align: center;" rowspan={{course.classes.length}} ng-if="$index==0">
+                                        <div ng-bind-html="course.paymentButton"></div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--End Basic Table-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End About Our Day Camps -->
+
     <!-- About Our Camps -->
     <section class="1g-bg-secondary g-py-30" ng-controller="ParentsController as parents">
         <div class="container">
@@ -186,6 +342,12 @@
                                         Details
                                     </a>
                                 </ul>
+
+                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0 hidden-sm-up">
+                                    <li class="list-inline-item mr-0">報名</li>
+                                </ul>
+                                <div class="hidden-sm-up" ng-bind-html="course.paymentButton"></div>
+
                             </div>
                         </a>
 
@@ -221,12 +383,6 @@
                                             </li>
                                         </ul>
 
-                                        <ul class="list-inline g-font-size-16 mb-0">
-                                            <a class="btn btn-block u-btn-primary g-rounded-50" ng-href="{{class.registerLink}}" target="_blank">
-                                                <i class="fa fa-bolt g-mr-5"></i>Register Now
-                                            </a>
-                                        </ul>
-
                                     </div>
                                 </a>
 
@@ -244,7 +400,7 @@
                             <table class="table table-bordered u-table--v2">
                                 <thead class="g-letter-spacing-1">
                                 <tr>
-                                    <th class="g-font-weight-300 g-color-black">Class</th>
+                                    <!--<th class="g-font-weight-300 g-color-black">Class</th>-->
                                     <th class="g-font-weight-300 g-color-black g-min-width-200">Date/Time</th>
                                     <th class="g-font-weight-300 g-color-black g-min-width-200">Location</th>
                                     <th class="g-font-weight-300 g-color-black">Registration</th>
@@ -254,9 +410,9 @@
                                 <tbody>
 
                                 <tr ng-repeat="class in course.classes">
-                                    <td class="align-middle text-nowrap">
-                                        <h4 class="h6 g-mb-2">{{class.id}}</h4>
-                                    </td>
+                                    <!--<td class="align-middle text-nowrap">-->
+                                        <!--<h4 class="h6 g-mb-2">{{class.id}}</h4>-->
+                                    <!--</td>-->
                                     <td class="align-middle">
                                         {{class.eDate}}<br>{{class.time}}
                                     </td>
@@ -266,10 +422,8 @@
                                             <span>{{class.eLocation}}</span>
                                         </div>
                                     </td>
-                                    <td class="align-middle">
-                                        <a class="btn btn-block u-btn-primary g-rounded-50 g-py-5" ng-href="{{class.registerLink}}">
-                                            <i class="fa fa-bolt g-mr-5"></i> Register Now
-                                        </a>
+                                    <td class="align-middle" style="text-align: center;" rowspan={{course.classes.length}} ng-if="$index==0">
+                                        <div ng-bind-html="course.paymentButton"></div>
                                     </td>
                                 </tr>
                                 </tbody>
