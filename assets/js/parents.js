@@ -36,8 +36,8 @@ angular.module('piApp.controllers')
             date: '2018年6月25日',
             eDate: '25th June, 2018',
             time: '9:30am - 4:30pm (12:30-1:30午膳)',
-            location: '香港生產力促進局',
-            eLocation: 'Hong Kong Productivity Council'
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok'
           },
           {
             idName: '班別二',
@@ -45,8 +45,8 @@ angular.module('piApp.controllers')
             date: '2018年7月2日',
             eDate: '2nd July, 2018',
             time: '9:30am - 4:30pm (12:30-1:30午膳)',
-            location: '香港生產力促進局',
-            eLocation: 'Hong Kong Productivity Council'
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok'
           },
           {
             idName: '班別三',
@@ -54,8 +54,8 @@ angular.module('piApp.controllers')
             date: '2018年7月23日',
             eDate: '23rd July, 2018',
             time: '9:30am - 4:30pm (12:30-1:30午膳)',
-            location: '香港生產力促進局',
-            eLocation: 'Hong Kong Productivity Council'
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok'
           },
           {
             idName: '班別四',
@@ -63,8 +63,8 @@ angular.module('piApp.controllers')
             date: '2018年7月30日',
             eDate: '30th July, 2018',
             time: '9:30am - 4:30pm (12:30-1:30午膳)',
-            location: '香港生產力促進局',
-            eLocation: 'Hong Kong Productivity Council'
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok'
           }
         ]
       }
@@ -103,8 +103,8 @@ angular.module('piApp.controllers')
             date: '2018年7月17-20日',
             eDate: '17th - 20th Jul, 2018',
             time: '9:30am-12:30pm',
-            location: '香港生產力促進局',
-            eLocation: 'Hong Kong Productivity Council',
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok',
             registerLink: 'https://www.eventbrite.hk/e/717-20-summer-scratch-animation-game-design-camp-scratch-tickets-45339190740'
           },
           {
@@ -114,8 +114,8 @@ angular.module('piApp.controllers')
             date: '2018年7月31-8月3日',
             eDate: '31st Jul - 3rd Aug, 2018',
             time: '9:30am-12:30pm',
-            location: '香港生產力促進局',
-            eLocation: 'Hong Kong Productivity Council',
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok',
             registerLink: 'https://www.eventbrite.hk/e/731-83-summer-scratch-animation-game-design-camp-scratch-tickets-45339394349'
           },
           {
@@ -125,8 +125,8 @@ angular.module('piApp.controllers')
             date: '2018年8月14-17日',
             eDate: '14th - 17th Aug, 2018',
             time: '9:30am-12:30pm',
-            location: '香港生產力促進局',
-            eLocation: 'Hong Kong Productivity Council',
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok',
             registerLink: 'https://www.eventbrite.hk/e/814-817-summer-scratch-animation-game-design-camp-scratch-tickets-45339473586'
           }
         ]
@@ -163,8 +163,8 @@ angular.module('piApp.controllers')
             date: '2018年7月24-27日',
             eDate: '24th - 27th Jul, 2018',
             time: '9:30am-12:30pm',
-            location: '香港生產力促進局',
-            eLocation: 'Hong Kong Productivity Council',
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok',
             registerLink: 'https://www.eventbrite.hk/e/724-27-summer-mobile-apps-development-camp-tickets-45339911897'
           },
           {
@@ -174,8 +174,8 @@ angular.module('piApp.controllers')
             date: '2018年8月7-10日',
             eDate: '7th - 10th Aug, 2018',
             time: '9:30am-12:30pm',
-            location: '香港生產力促進局',
-            eLocation: 'Hong Kong Productivity Council',
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok',
             registerLink: 'https://www.eventbrite.hk/e/87-10-summer-mobile-game-development-camp-tickets-45339971074'
           },
           {
@@ -185,8 +185,8 @@ angular.module('piApp.controllers')
             date: '2018年8月21-24日',
             eDate: '21st - 24th Aug, 2018',
             time: '9:30am-12:30pm',
-            location: '香港生產力促進局',
-            eLocation: 'Hong Kong Productivity Council',
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok',
             registerLink: 'https://www.eventbrite.hk/e/821-24-summer-mobile-game-development-camp-tickets-45340044293'
           }
         ]
