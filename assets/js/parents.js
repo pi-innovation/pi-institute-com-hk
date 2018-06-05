@@ -23,6 +23,8 @@ angular.module('piApp.controllers')
           '\t<option value="2018年7月2日">2018年7月2日 $2,700.00 HKD</option>\n' +
           '\t<option value="2018年7月23日">2018年7月23日 $2,700.00 HKD</option>\n' +
           '\t<option value="2018年7月30日">2018年7月30日 $2,700.00 HKD</option>\n' +
+          '\t<option value="2018年8月13日">2018年8月13日 $2,700.00 HKD</option>\n' +
+          '\t<option value="2018年8月27日">2018年8月27日 $2,700.00 HKD</option>\n' +
           '</select> </td></tr>\n' +
           '</table>\n' +
           '<input type="hidden" name="currency_code" value="HKD">\n' +
@@ -62,6 +64,24 @@ angular.module('piApp.controllers')
             eIdName: 'Class 4',
             date: '2018年7月30日',
             eDate: '30th July, 2018',
+            time: '9:30am - 4:30pm (12:30-1:30午膳)',
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok'
+          },
+          {
+            idName: '班別五',
+            eIdName: 'Class 5',
+            date: '2018年8月13日',
+            eDate: '13th Aug, 2018',
+            time: '9:30am - 4:30pm (12:30-1:30午膳)',
+            location: '旺角鎮海商業大廈9樓B室',
+            eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok'
+          },
+          {
+            idName: '班別六',
+            eIdName: 'Class 6',
+            date: '2018年8月27日',
+            eDate: '27th Aug, 2018',
             time: '9:30am - 4:30pm (12:30-1:30午膳)',
             location: '旺角鎮海商業大廈9樓B室',
             eLocation: 'Room 9B, Chun Hoi Commercial Bldg, 688 Shanghai St, Mongkok'
