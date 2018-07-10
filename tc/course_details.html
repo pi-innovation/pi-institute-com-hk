@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="../assets/js/piApp.js"></script>
     <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/parents.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110577620-1"></script>
     <script>
@@ -121,35 +122,25 @@
       <!-- End Header -->
 
       <!-- About Our Company -->
-      <section class="1g-bg-secondary g-py-30">
+      <section class="1g-bg-secondary g-py-30" ng-controller="ParentsController as parents" ng-cloak>
         <div class="container">
           <div class="row">
             <div class="col-lg-8 align-self-center g-mb-0 g-mb-100--lg">
               <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
-                <h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600">暑期一天營會：六小時mBot工作坊</h1>
+                <h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600">{{parents.group.cGroupName}}：{{parents.course.cName}}</h1>
               </header>
 
               <p class="g-font-size-20">簡介</p>
-              <p class="g-font-size-14 g-mb-30">在一日六小時的mBot工作坊內，學生需要以電腦為mBot編寫程式，完成巡線任務之餘，更可以與同學進行相撲比賽！
-                在巡線場上究竟誰能走得最快，誰能闖過各種複雜的位置？在相撲場上又如何能夠有效地將對手推翻、
-                防止自己出界等？這些均需要考驗學生的心思與創意。透過比賽與任務，同學將能學習到以下的技巧:
+              <p class="g-font-size-14 g-mb-30">{{parents.course.cIntro}}
               </p>
 
               <ul class="list-unstyled g-color-gray-dark-v4 g-mb-30">
-                <li class="d-flex g-mb-10">
-                  <i class="icon-check g-color-primary g-mt-5 g-mr-10"></i>基礎機械人及編程知識</li>
-                <li class="d-flex g-mb-10">
-                  <i class="icon-check g-color-primary g-mt-5 g-mr-10"></i>控制流程，例如「如果，那麼，否則」等 (Control flow,e.g. if, then, else etc.)</li>
-                <li class="d-flex g-mb-10">
-                  <i class="icon-check g-color-primary g-mt-5 g-mr-10"></i>變數及運算思維 (Variables and computations)</li>
-                <li class="d-flex g-mb-10">
-                  <i class="icon-check g-color-primary g-mt-5 g-mr-10"></i>除錯技巧 (Debugging techniques)</li>
-                <li class="d-flex g-mb-10">
-                  <i class="icon-check g-color-primary g-mt-5 g-mr-10"></i>動手製作技巧(Hands-on skill)</li>
+                <li class="d-flex g-mb-10" ng-repeat="objective in parents.course.cObjectives">
+                  <i class="icon-check g-color-primary g-mt-5 g-mr-10"></i>{{objective}}</li>
               </ul>
 
               <p class="g-font-size-20">適合年齡</p>
-              <p class="g-font-size-14 g-mb-30">8-12</p>
+              <p class="g-font-size-14 g-mb-30">{{parents.course.age}}</p>
 
               <p class="g-font-size-20">注意事項</p>
               <p class="g-font-size-14 g-mb-30">學生需自備手提電腦(Windows或Mac系統均可)</p>
@@ -158,7 +149,6 @@
             <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
               <article class="u-shadow-v1-5 g-line-height-2 g-transition-0_3">
 
-                <a ng-href="{{course.detailslink}}">
                   <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
 
                     <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
@@ -168,10 +158,7 @@
                     <ul class="list-inline g-font-size-16 mb-0">
                       <li class="list-inline-item g-mb-10 card-small-text"
                           style="padding-bottom: 5px">
-                        <p>班別一<br>日期: 2018年6月25日 <br>9:30am - 4:30pm (12:30-1:30午膳)</p>
-                        <p>班別一<br>日期: 2018年6月25日 <br>9:30am - 4:30pm (12:30-1:30午膳)</p>
-                        <p>班別一<br>日期: 2018年6月25日 <br>9:30am - 4:30pm (12:30-1:30午膳)</p>
-                        <p>班別一<br>日期: 2018年6月25日 <br>9:30am - 4:30pm (12:30-1:30午膳)</p>
+                        <p ng-repeat="class in parents.course.classes">{{class.idName}}<br>{{class.date}}<br>{{class.time}}</p>
                       </li>
                     </ul>
 
@@ -182,7 +169,7 @@
                     <ul class="list-inline g-font-size-16 mb-0">
                       <li class="list-inline-item g-mb-10 card-small-text"
                           style="padding-bottom: 5px">
-                        HKD 2,700 (早鳥優惠 HKD 3500)
+                        {{parents.course.fee}}
                       </li>
                     </ul>
 
@@ -194,28 +181,11 @@
                     <ul class="list-inline g-font-size-16 mb-0">
                       <li class="list-inline-item g-mb-10 card-small-text"
                           style="padding-bottom: 5px">
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                          <input type="hidden" name="cmd" value="_s-xclick">
-                          <input type="hidden" name="hosted_button_id" value="WXALN3Q6GJ4WL">
-                          <table>
-                            <tr><td><input type="hidden" name="on0" value="日期">請選擇日期</td></tr><tr><td><select name="os0">
-                            <option value="2018年6月25日">2018年6月25日 $2,700.00 HKD</option>
-                            <option value="2018年7月2日">2018年7月2日 $2,700.00 HKD</option>
-                            <option value="2018年7月23日">2018年7月23日 $2,700.00 HKD</option>
-                            <option value="2018年7月30日">2018年7月30日 $2,700.00 HKD</option>
-                            <option value="2018年8月13日">2018年8月13日 $2,700.00 HKD</option>
-                            <option value="2018年8月27日">2018年8月27日 $2,700.00 HKD</option>
-                          </select> </td></tr>
-                          </table>
-                          <input type="hidden" name="currency_code" value="HKD">
-                          <input type="image" src="https://www.paypalobjects.com/en_GB/HK/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-                          <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-                        </form>
+                        <div ng-bind-html="parents.course.paymentButton"></div>
                       </li>
                     </ul>
 
                   </div>
-                </a>
               </article>
             </div>
 
