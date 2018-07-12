@@ -32,9 +32,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Pi Innovation Team has started promoting STEM and innovation education since 2012. We provide customized courses and workshops for schools,
-    NGOs and government divisions. Our onsite education services covered robotics, coding, science experiments, design thinking, logical thinking and a lot more. Hoping to provide more STEM learning opportunities
-    for our next generation, we also provided free school-based STEM project consultations for schools on their STEM development plans.">
+    <meta name="description" content="Pi Innovation團隊於自2012年起致力於學界推動STEM及創新教育，為學校、非牟利機構、以至政府部門安排度身訂造的課程及工作坊，
+    讓更多的同學有機會接觸創新科技。我們為各類機構提供STEM課程，內容涵蓋機械人、編程、科學實驗、創意思維、設計思維、邏輯思考等等。我們亦可為針對學校的需要特別設計課程，配合學校及學生的需要。
+    同時我們亦為學校提供校本STEM計劃顧問服務，免費為學校規劃STEM教育專案及藍圖。">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../favicon.ico">
@@ -103,7 +103,7 @@
                          id="navBar" ng-controller="MenuController as menuItems">
                         <ul class="navbar-nav g-pos-rel g-font-weight-600 ml-auto">
                             <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items" ng-class="{'hidden-sm-up': item.mobileOnly}">
-                                <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.eName}}</a>
+                                <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)" target="{{item.openInBlank ? '_blank' : '_self'}}">{{item.cName}}</a>
                             </li>
 
                             <li class="nav-item g-mx-10--lg g-mx-15--xl">
@@ -124,319 +124,98 @@
     <!-- End Header -->
 
     <!-- About Our Day Camps -->
-    <section class="1g-bg-secondary g-py-30" ng-controller="ParentsController as parents">
+    <div ng-controller="ParentsController as parents" ng-cloak>
+
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 align-self-center g-mb-0--lg">
-                    <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
-                        <h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600">
-                            Summer Day Camps</h1>
+                <div class="col-lg-12 align-self-center g-mb-0--lg">
+                    <header class="g-brd-primary g-mt-20">
+                        <h4 class="h4 g-color-gray-dark-v2">
+                            (This page is only available in Chinese. Please contact us for English information.)</h4>
                     </header>
                 </div>
             </div>
+        </div>
 
-            <div class="row" style="margin-bottom: 50px;" ng-repeat="course in parents.dayCourses">
-                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
-                    <article class="u-shadow-v1-5 g-line-height-2 g-transition-0_3">
-                        <a ng-href="{{course.detailslink}}">
-                            <img class="img-fluid w-100 g-rounded-top-5"
-                                 ng-src="../assets/banner/{{course.image}}"
-                                 alt="Robotics Foundations Course">
-                            <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                                <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                    {{course.eName}}
-                                </h2>
-
-
-                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                    <li class="list-inline-item mr-0">Course Materials</li>
-                                </ul>
-
-                                <ul class="list-inline g-font-size-16 mb-0">
-                                    <li class="list-inline-item g-mb-10 card-small-text"
-                                        style="padding-bottom: 5px">
-                                        {{course.eMaterial}}
-                                    </li>
-                                </ul>
-
-                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                    <li class="list-inline-item mr-0">Age</li>
-                                </ul>
-
-                                <ul class="list-inline g-font-size-16 mb-0">
-                                    <li class="list-inline-item g-mb-10 card-small-text"
-                                        style="padding-bottom: 5px">
-                                        {{course.age}}
-                                    </li>
-                                </ul>
-
-                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                    <li class="list-inline-item mr-0">Fee</li>
-                                </ul>
-
-                                <ul class="list-inline g-font-size-16 mb-0">
-                                    <li class="list-inline-item g-mb-10 card-small-text"
-                                        style="padding-bottom: 5px">
-                                        {{course.efee}}
-                                    </li>
-                                </ul>
-
-                                <ul class="list-inline g-font-size-16 mb-0">
-                                    <a class="btn u-btn-primary g-rounded-50" ng-href="{{course.detailslink}}">
-                                        Details
-                                    </a>
-                                </ul>
-
-                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0 hidden-sm-up">
-                                    <li class="list-inline-item mr-0">Registration</li>
-                                </ul>
-                                <div class="hidden-sm-up" ng-bind-html="course.paymentButton"></div>
-
-                            </div>
-                        </a>
-
-                        <div class="col-lg-4 col-md-6 g-pb-15 g-mb-0--lg hidden-sm-up" ng-repeat="class in course.classes">
-                            <article class="u-shadow-v2 g-brd-around g-brd-gray-light-v4 g-line-height-2  g-transition-0_3">
-                                <a href="#">
-                                    <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                                        <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                            {{class.idName}}<br>({{class.id}})
-                                        </h2>
-
-
-                                        <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                            <li class="list-inline-item mr-0">Date</li>
-                                        </ul>
-
-                                        <ul class="list-inline g-font-size-16 mb-0">
-                                            <li class="list-inline-item g-mb-10 card-small-text"
-                                                style="padding-bottom: 5px">
-                                                {{class.date}}<br>{{class.time}}
-                                            </li>
-                                        </ul>
-
-                                        <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                            <li class="list-inline-item mr-0">Location</li>
-                                        </ul>
-
-                                        <ul class="list-inline g-font-size-16 mb-0">
-                                            <li class="list-inline-item g-mb-10 card-small-text"
-                                                style="padding-bottom: 5px">
-                                                {{class.location}}
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </a>
-
-                            </article>
-                        </div>
-
-                    </article>
-                </div>
-
-                <div class="col-lg-8 col-md-6 g-mb-30 g-mb-0--lg hidden-sm-down">
-
-                    <div class="shortcode-html">
-                        <!--Basic Table-->
-                        <div class="table-responsive">
-                            <table class="table table-bordered u-table--v2">
-                                <thead class="text-uppercase g-letter-spacing-1">
-                                <tr>
-                                    <th class="g-font-weight-300 g-color-black g-min-width-200">Date/Time</th>
-                                    <th class="g-font-weight-300 g-color-black g-min-width-200">Location</th>
-                                    <th class="g-font-weight-300 g-color-black">Registration</th>
-                                </tr>
-                                </thead>
-
-                                <tbody>
-
-                                <tr ng-repeat="class in course.classes">
-                                    <td class="align-middle text-nowrap">
-                                        {{class.eDate}}<br>{{class.time}}
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="d-flex">
-                                            <i class="icon-location-pin g-font-size-18 g-color-gray-dark-v5 g-pos-rel g-top-5 g-mr-7"></i>
-                                            <span>{{class.eLocation}}</span>
-                                        </div>
-                                    </td>
-                                    <td class="align-middle" style="text-align: center;" rowspan={{course.classes.length}} ng-if="$index==0">
-                                        <div ng-bind-html="course.paymentButton"></div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!--End Basic Table-->
+        <section class="1g-bg-secondary g-pb-30" ng-repeat="group in parents.courseGroups">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center g-mb-0--lg">
+                        <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
+                            <h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600">
+                                {{group.cGroupName}}</h1>
+                        </header>
                     </div>
                 </div>
-            </div>
 
-        </div>
-    </section>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 g-mb-20" ng-repeat="course in group.courses">
+                        <article class="u-shadow-v1-5 g-line-height-2 g-transition-0_3">
+                            <a ng-href="course_details.html?group={{group.groupId}}&course={{course.courseId}}">
+                                <img class="img-fluid w-100 g-rounded-top-5"
+                                     ng-src="../assets/banner/{{course.image}}"
+                                     alt="Robotics Foundations Course">
+                                <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
+
+                                    <h2 class="h5 g-color-black g-font-weight-600 mb-4">
+                                        {{course.cName}}
+                                    </h2>
+
+
+                                    <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
+                                        <li class="list-inline-item mr-0">課程教材</li>
+                                    </ul>
+
+                                    <ul class="list-inline g-font-size-16 mb-0">
+                                        <li class="list-inline-item g-mb-10 card-small-text"
+                                            style="padding-bottom: 5px">
+                                            {{course.cMaterial}}
+                                        </li>
+                                    </ul>
+
+                                    <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
+                                        <li class="list-inline-item mr-0">適合年齡</li>
+                                    </ul>
+
+                                    <ul class="list-inline g-font-size-16 mb-0">
+                                        <li class="list-inline-item g-mb-10 card-small-text"
+                                            style="padding-bottom: 5px">
+                                            {{course.age}}
+                                        </li>
+                                    </ul>
+
+                                    <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
+                                        <li class="list-inline-item mr-0">費用</li>
+                                    </ul>
+
+                                    <ul class="list-inline g-font-size-16 mb-0">
+                                        <li class="list-inline-item g-mb-10 card-small-text"
+                                            style="padding-bottom: 5px">
+                                            {{course.fee}}
+                                        </li>
+                                    </ul>
+
+                                    <ul class="list-inline g-font-size-16 mb-0">
+                                        <a class="btn u-btn-primary g-rounded-50" ng-href="course_details.html?group={{group.groupId}}&course={{course.courseId}}">
+                                            詳情及報名
+                                        </a>
+                                    </ul>
+
+                                </div>
+                            </a>
+
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
     <!-- End About Our Day Camps -->
 
-    <!-- About Our Camps -->
-    <section class="1g-bg-secondary g-py-30" ng-controller="ParentsController as parents">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-self-center g-mb-0--lg">
-                    <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
-                        <h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600">
-                            Summer Camps</h1>
-                    </header>
-                </div>
-            </div>
-
-            <div class="row" style="margin-bottom: 50px;" ng-repeat="course in parents.courses">
-                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
-                    <article class="u-shadow-v1-5 g-line-height-2 g-transition-0_3">
-                        <a ng-href="{{course.detailslink}}">
-                            <img class="img-fluid w-100 g-rounded-top-5"
-                                 ng-src="../assets/banner/{{course.image}}">
-                            <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                                <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                    {{course.eName}}
-                                </h2>
-
-
-                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                    <li class="list-inline-item mr-0">Course Materials</li>
-                                </ul>
-
-                                <ul class="list-inline g-font-size-16 mb-0">
-                                    <li class="list-inline-item g-mb-10 card-small-text"
-                                        style="padding-bottom: 5px">
-                                        {{course.eMaterial}}
-                                    </li>
-                                </ul>
-
-                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                    <li class="list-inline-item mr-0">Age</li>
-                                </ul>
-
-                                <ul class="list-inline g-font-size-16 mb-0">
-                                    <li class="list-inline-item g-mb-10 card-small-text"
-                                        style="padding-bottom: 5px">
-                                        {{course.age}}
-                                    </li>
-                                </ul>
-
-                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                    <li class="list-inline-item mr-0">Program Fee</li>
-                                </ul>
-
-                                <ul class="list-inline g-font-size-16 mb-0">
-                                    <li class="list-inline-item g-mb-10 card-small-text"
-                                        style="padding-bottom: 5px">
-                                        {{course.efee}}
-                                    </li>
-                                </ul>
-
-                                <ul class="list-inline g-font-size-16 mb-0">
-                                    <a class="btn u-btn-primary g-rounded-50" ng-href="{{course.detailslink}}">
-                                        Details
-                                    </a>
-                                </ul>
-
-                                <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0 hidden-sm-up">
-                                    <li class="list-inline-item mr-0">報名</li>
-                                </ul>
-                                <div class="hidden-sm-up" ng-bind-html="course.paymentButton"></div>
-
-                            </div>
-                        </a>
-
-                        <div class="col-lg-4 col-md-6 g-pb-15 g-mb-0--lg hidden-sm-up" ng-repeat="class in course.classes">
-                            <article class="u-shadow-v2 g-brd-around g-brd-gray-light-v4 g-line-height-2  g-transition-0_3">
-                                <a href="#">
-                                    <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                                        <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                            {{class.eIdName}}<br>({{class.id}})
-                                        </h2>
-
-
-                                        <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                            <li class="list-inline-item mr-0">Date/Time</li>
-                                        </ul>
-
-                                        <ul class="list-inline g-font-size-16 mb-0">
-                                            <li class="list-inline-item g-mb-10 card-small-text"
-                                                style="padding-bottom: 5px">
-                                                {{class.eDate}}<br>{{class.time}}
-                                            </li>
-                                        </ul>
-
-                                        <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                            <li class="list-inline-item mr-0">Location</li>
-                                        </ul>
-
-                                        <ul class="list-inline g-font-size-16 mb-0">
-                                            <li class="list-inline-item g-mb-10 card-small-text"
-                                                style="padding-bottom: 5px">
-                                                {{class.eLocation}}
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </a>
-
-                            </article>
-                        </div>
-
-                    </article>
-                </div>
-
-                <div class="col-lg-8 col-md-6 g-mb-30 g-mb-0--lg hidden-sm-down">
-
-                    <div class="shortcode-html">
-                        <!--Basic Table-->
-                        <div class="table-responsive">
-                            <table class="table table-bordered u-table--v2">
-                                <thead class="g-letter-spacing-1">
-                                <tr>
-                                    <!--<th class="g-font-weight-300 g-color-black">Class</th>-->
-                                    <th class="g-font-weight-300 g-color-black g-min-width-200">Date/Time</th>
-                                    <th class="g-font-weight-300 g-color-black g-min-width-200">Location</th>
-                                    <th class="g-font-weight-300 g-color-black">Registration</th>
-                                </tr>
-                                </thead>
-
-                                <tbody>
-
-                                <tr ng-repeat="class in course.classes">
-                                    <!--<td class="align-middle text-nowrap">-->
-                                        <!--<h4 class="h6 g-mb-2">{{class.id}}</h4>-->
-                                    <!--</td>-->
-                                    <td class="align-middle">
-                                        {{class.eDate}}<br>{{class.time}}
-                                    </td>
-                                    <td class="align-middle">
-                                        <div class="d-flex">
-                                            <i class="icon-location-pin g-font-size-18 g-color-gray-dark-v5 g-pos-rel g-top-5 g-mr-7"></i>
-                                            <span>{{class.eLocation}}</span>
-                                        </div>
-                                    </td>
-                                    <td class="align-middle" style="text-align: center;" rowspan={{course.classes.length}} ng-if="$index==0">
-                                        <div ng-bind-html="course.paymentButton"></div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!--End Basic Table-->
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- End About Our Camp -->
 
     <!-- Copyright Footer -->
     <footer class="g-bg-gray-dark-v1 g-color-white-opacity-0_8 g-py-20">
