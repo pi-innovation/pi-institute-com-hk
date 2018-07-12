@@ -101,7 +101,7 @@
                    id="navBar" ng-controller="MenuController as menuItems">
                 <ul class="navbar-nav g-pos-rel g-font-weight-600 ml-auto">
                   <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items" ng-class="{'hidden-sm-up': item.mobileOnly}">
-                    <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.cName}}</a>
+                    <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)" target="{{item.openInBlank ? '_blank' : '_self'}}">{{item.cName}}</a>
                   </li>
 
                   <li class="nav-item g-mx-10--lg g-mx-15--xl">
@@ -122,7 +122,7 @@
       <!-- End Header -->
 
       <!-- About Our Company -->
-      <section class="1g-bg-secondary g-py-30" ng-controller="ParentsController as parents" ng-cloak>
+      <section class="1g-bg-secondary g-py-30 g-mb-400" ng-controller="ParentsController as parents" ng-cloak>
         <div class="container">
           <div class="row">
             <div class="col-lg-8 align-self-center g-mb-0 g-mb-100--lg">

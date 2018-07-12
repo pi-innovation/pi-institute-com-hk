@@ -100,7 +100,7 @@
                    id="navBar" ng-controller="MenuController as menuItems">
                 <ul class="navbar-nav g-pos-rel g-font-weight-600 ml-auto">
                   <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items" ng-class="{'hidden-sm-up': item.mobileOnly}">
-                    <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.cName}}</a>
+                    <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)" target="{{item.openInBlank ? '_blank' : '_self'}}">{{item.cName}}</a>
                   </li>
 
                   <li class="nav-item g-mx-10--lg g-mx-15--xl">
@@ -143,7 +143,7 @@
           <div class="d-flex justify-content-between">
             <h3 class="h5 align-self-center g-color-white mb-0 mr-4">想更直接了解我們的課程精華及活動內容？</h3>
             <div>
-              <a class="align-self-center btn btn-xl u-btn-outline-white g-font-size-default g-mr-10 hidden-sm-down" href="https://medium.com/pi-innovation" target="_blank">過往專案</a>
+              <a class="align-self-center btn btn-xl u-btn-outline-white g-font-size-default g-mr-10" href="https://medium.com/pi-innovation" target="_blank">過往專案</a>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@
           <div class="col-lg-9">
             <h2 class="h3 g-color-black g-font-weight-600 text-uppercase mb-2">我們的服務</h2>
             <div class="d-inline-block g-width-35 g-height-2 g-bg-primary mb-2"></div>
-            <p class="lead mb-0">我們團隊致力於學界推動STEM及創新教育，為學校、非牟利機構、以至政府部門安排度身訂造的課程及工作坊， 讓更多的同學有機會接觸創新科技。</p>
+            <p class="lead mb-0">我們團隊致力於學界推動STEM及創新教育，為學校、家長、非牟利機構、以至政府部門安排度身訂造的課程及工作坊， 讓更多的同學有機會接觸創新科技。</p>
           </div>
         </div>
         <!-- End Heading -->
@@ -328,6 +328,13 @@
                 <li class="list-inline-item g-mx-10" data-toggle="tooltip" data-placement="top" title="Facebook">
                   <a href="https://www.facebook.com/pi.innovation.3.14/" target="_blank" class="g-color-white-opacity-0_5 g-color-white--hover">
                     <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item g-mx-10" data-toggle="tooltip"
+                    data-placement="top" title="Medium Portfolio">
+                  <a href="https://medium.com/pi-innovation" target="_blank"
+                     class="g-color-white-opacity-0_5 g-color-white--hover">
+                    <i class="fa fa-medium"></i>
                   </a>
                 </li>
               </ul>

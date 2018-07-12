@@ -100,7 +100,7 @@
                    id="navBar" ng-controller="MenuController as menuItems">
                 <ul class="navbar-nav g-pos-rel g-font-weight-600 ml-auto">
                   <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items" ng-class="{'hidden-sm-up': item.mobileOnly}">
-                    <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.cName}}</a>
+                    <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)" target="{{item.openInBlank ? '_blank' : '_self'}}">{{item.cName}}</a>
                   </li>
 
                   <li class="nav-item g-mx-10--lg g-mx-15--xl">
@@ -610,6 +610,13 @@ updated:&nbsp;<b style='mso-bidi-font-weight:normal'>29 April 2018</b></span><sp
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
+                  <li class="list-inline-item g-mx-10" data-toggle="tooltip"
+                      data-placement="top" title="Medium Portfolio">
+                      <a href="https://medium.com/pi-innovation" target="_blank"
+                         class="g-color-white-opacity-0_5 g-color-white--hover">
+                          <i class="fa fa-medium"></i>
+                      </a>
+                  </li>
               </ul>
             </div>
           </div>

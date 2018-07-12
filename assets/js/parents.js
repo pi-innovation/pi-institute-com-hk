@@ -114,6 +114,15 @@ angular.module('piApp.controllers')
           age: '8-12',
           fee: 'HKD 3900 (5月31日前報名，可獲早鳥優惠 HKD 3500)',
           efee: 'HKD 3900 (Early Bird@HKD 3500 before 31st May)',
+          cIntro: '小朋友的想像力隨時比成年人更豐富！想激發您孩子無窮無盡的創意，運用源源不絕的想像力，Scratch 動畫 製作及遊戲設計營會絕對是為您「兒」設。由簡單動畫製作到進階編程知識，小朋友將會建構獨一無二的動畫及遊戲，向至親的您分享學習的成果與樂趣。',
+          cObjectives: [
+            '故事演譯技巧及腦力激盪思維訓練',
+            '基礎動畫製作',
+            '基礎編程知識',
+            '控制流程，例如「如果，那麼，否則」等 (Control flow,e.g. if, then, else etc.)',
+            '變數及運算思維 (Variables and computations)',
+            '除錯技巧 (Debugging techniques)',
+          ],
           paymentButton: $sce.trustAsHtml('<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n' +
             '<input type="hidden" name="cmd" value="_s-xclick">\n' +
             '<input type="hidden" name="hosted_button_id" value="7REVY55BMDWGQ">\n' +
@@ -166,6 +175,15 @@ angular.module('piApp.controllers')
           age: '8-12',
           fee: 'HKD 3900 (5月31日前報名，可獲早鳥優惠 HKD 3500)',
           efee: 'HKD 3900 (Early Bird@HKD 3500 before 31st May)',
+          cIntro: '為期四日的夏令營，讓您的孩子從零到一地學習設計Android 手機遊戲程式！具豐富經驗的導師將以麻省理 工學院研發的「MIT App Inventor」，從基礎知識到進階技巧，循序漸進地引領您的孩子製作屬於自己的手機遊戲程式。\n\n' +
+          '營會亦鼓勵學生將自己無限的創意注入自己的手機遊戲程式，更希望學生可以將心血結晶向至親分享，共享編程樂趣！',
+          cObjectives: [
+            '基礎編程知識',
+            '控制流程，例如「如果，那麼，否則」等 (Control flow,e.g. if, then, else etc.)',
+            '變數及運算思維 (Variables and computations)\n',
+            '電話感應器控制，例如螢幕手勢控制、陀螺儀、加速度計，GPS',
+            '除錯技巧 (Debugging techniques)',
+          ],
           paymentButton: $sce.trustAsHtml('<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n' +
             '<input type="hidden" name="cmd" value="_s-xclick">\n' +
             '<table>\n' +

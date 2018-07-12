@@ -98,10 +98,10 @@
 
                     <!-- Navigation -->
                     <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg"
-                         id="navBar" ng-controller="MenuController as menuItems" ng-class="{'hidden-sm-up': item.mobileOnly}">
+                         id="navBar" ng-controller="MenuController as menuItems">
                         <ul class="navbar-nav g-pos-rel g-font-weight-600 ml-auto">
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items">
-                                <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)">{{item.cName}}</a>
+                            <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items" ng-class="{'hidden-sm-up': item.mobileOnly}">
+                                <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)" target="{{item.openInBlank ? '_blank' : '_self'}}">{{item.cName}}</a>
                             </li>
 
                             <li class="nav-item g-mx-10--lg g-mx-15--xl">
@@ -121,17 +121,35 @@
     </header>
     <!-- End Header -->
 
+    <div class="container g-pt-50">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <h2 class="h1 g-color-black g-font-weight-600 mb-0">我們為學校提供一系列
+                    <span class="d-inline-block g-brd-bottom g-brd-2 g-brd-primary g-color-primary">富趣味</span> 及
+                    <span class="d-inline-block g-brd-bottom g-brd-2 g-brd-primary g-color-primary">具教育意義</span>  的STEM課程及活動。亦可為學校
+                    <span class="d-inline-block g-brd-bottom g-brd-2 g-brd-primary g-color-primary">度身訂造</span>其他活動及課程。
+                </h2>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center g-pt-20">
+            <div class="col-lg-8">
+                <a class="btn u-btn-primary g-brd-2 g-font-weight-700 g-font-size-13 g-rounded-50 g-py-15 g-px-30" href="https://medium.com/pi-innovation" target="_blank">按此查閱過往專案</a>
+            </div>
+        </div>
+
+    </div>
+
     <!-- About Our Company -->
     <section class="1g-bg-secondary g-py-30 g-pb-30">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-self-center g-mb-0--lg">
-                    <header class="u-heading-v2-3--bottom g-brd-primary g-mb-20">
-                        <h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600 text-uppercase">
-                            學校課程</h1>
-                    </header>
-                </div>
-            </div>
+            <!--<div class="row">-->
+                <!--<div class="col-lg-6 align-self-center g-mb-0&#45;&#45;lg">-->
+                    <!--<header class="u-heading-v2-3&#45;&#45;bottom g-brd-primary g-mb-20">-->
+                        <!--<h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600 text-uppercase">-->
+                            <!--學校課程</h1>-->
+                    <!--</header>-->
+                <!--</div>-->
+            <!--</div>-->
 
             <div class="row" style="margin-bottom: 50px;">
                 <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
@@ -446,6 +464,13 @@
                             <a href="https://www.facebook.com/pi.innovation.3.14/" target="_blank"
                                class="g-color-white-opacity-0_5 g-color-white--hover">
                                 <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item g-mx-10" data-toggle="tooltip"
+                            data-placement="top" title="Medium Portfolio">
+                            <a href="https://medium.com/pi-innovation" target="_blank"
+                               class="g-color-white-opacity-0_5 g-color-white--hover">
+                                <i class="fa fa-medium"></i>
                             </a>
                         </li>
                     </ul>

@@ -28,8 +28,9 @@ angular.module('piApp.controllers')
       }, {
         cName: '過往專案',
         eName: 'Portfolio',
-        link: 'portfolio.html',
+        link: 'https://medium.com/pi-innovation',
         mobileOnly: true,
+        openInBlank: true
       }, {
         cName: '客戶／合作夥伴',
         eName: 'Clients & Partners',
