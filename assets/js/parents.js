@@ -44,22 +44,23 @@ angular.module('piApp.controllers')
           '除錯技巧 (Debugging techniques)',
           '動手製作技巧(Hands-on skill)',
         ],
-        paymentButton:
-          $sce.trustAsHtml('<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n' +
-            '<input type="hidden" name="cmd" value="_s-xclick">\n' +
-            '<input type="hidden" name="hosted_button_id" value="WXALN3Q6GJ4WL">\n' +
-            '<table>\n' +
-            '<tr><td><input type="hidden" name="charset" value="utf-8"><input type="hidden" name="on0" value="日期">日期</td></tr><tr><td><select name="os0">\n' +
-            '\t<option value="2018年6月25日">2018年6月25日 $2,700.00 HKD</option>\n' +
-            '\t<option value="2018年7月2日">2018年7月2日 $2,700.00 HKD</option>\n' +
-            '\t<option value="2018年7月23日">2018年7月23日 $2,700.00 HKD</option>\n' +
-            '\t<option value="2018年7月30日">2018年7月30日 $2,700.00 HKD</option>\n' +
-            '</select> </td></tr>\n' +
-            '</table>\n' +
-            '<input type="hidden" name="currency_code" value="HKD">\n' +
-            '<input type="image" src="https://www.paypalobjects.com/en_GB/HK/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">\n' +
-            '<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">\n' +
-            '</form>\n'),
+        paymentButton: $sce.trustAsHtml('<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n' +
+          '<input type="hidden" name="cmd" value="_s-xclick">\n' +
+          '<input type="hidden" name="hosted_button_id" value="WXALN3Q6GJ4WL">\n' +
+          '<table>\n' +
+          '<tr><td><input type="hidden" name="charset" value="utf-8"><input type="hidden" name="on0" value="日期">日期</td></tr><tr><td><select name="os0">\n' +
+          '\t<option value="2018年6月25日">2018年6月25日 $2,700.00 HKD</option>\n' +
+          '\t<option value="2018年7月2日">2018年7月2日 $2,700.00 HKD</option>\n' +
+          '\t<option value="2018年7月23日">2018年7月23日 $2,700.00 HKD</option>\n' +
+          '\t<option value="2018年7月30日">2018年7月30日 $2,700.00 HKD</option>\n' +
+          '\t<option value="2018年8月13日">2018年8月13日 $2,700.00 HKD</option>\n' +
+          '\t<option value="2018年8月27日">2018年8月27日 $2,700.00 HKD</option>\n' +
+          '</select> </td></tr>\n' +
+          '</table>\n' +
+          '<input type="hidden" name="currency_code" value="HKD">\n' +
+          '<input type="image" src="https://www.paypalobjects.com/en_GB/HK/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">\n' +
+          '<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">\n' +
+          '</form>\n'),
         classes:
           [
             {
@@ -91,6 +92,22 @@ angular.module('piApp.controllers')
               eIdName: 'Class 4',
               date: '2018年7月30日',
               eDate: '30th July, 2018',
+              time: '9:30am - 4:30pm (12:30-1:30午膳)',
+              location: commonAddress.mk
+            },
+            {
+              idName: '班別五',
+              eIdName: 'Class 5',
+              date: '2018年8月13日',
+              eDate: '13th Aug, 2018',
+              time: '9:30am - 4:30pm (12:30-1:30午膳)',
+              location: commonAddress.mk
+            },
+            {
+              idName: '班別六',
+              eIdName: 'Class 6',
+              date: '2018年8月27日',
+              eDate: '27th Aug, 2018',
               time: '9:30am - 4:30pm (12:30-1:30午膳)',
               location: commonAddress.mk
             }
