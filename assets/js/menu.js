@@ -41,6 +41,11 @@ angular.module('piApp.controllers')
         eName: 'Contact',
         link: 'contact.html',
         mobileOnly: false,
+      }, {
+        cName: '加入我們',
+        eName: 'Join Us',
+        link: 'joinus.html',
+        mobileOnly: false,
       }
     ];
 
