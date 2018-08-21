@@ -198,7 +198,56 @@ angular.module('piApp.controllers')
               location: commonAddress.spk
             }
           ]
-        }
+        },
+        {
+          courseId: 2,
+          image: 'kindergarten.png',
+          cName: '幼兒STEM啟蒙課程',
+          eName: 'STEM For Kindergarten',
+          cMaterial: '幼兒STEM教材',
+          eMaterial: 'STEM teaching kits for Kindergarten',
+          age: '3-6',
+          fee: 'HKD 800 (已包材料費)',
+          efee: 'HKD 800 (Materials included)',
+          cIntro: '工作坊中透過故事繪本情節當中的科學元素，讓幼兒認識當中的概念。活動過程中，提升幼兒的解難能力、' +
+          '合作能力、創意能力及溝通能力。本次工作坊將以故事作引入，之後延伸至科學活動及遊戲。而遊戲主要是圍繞著建構性遊戲、' +
+          '創作性遊戲及想像性遊戲。課堂的發展階段強調「從生活中學習，從做中學。」經過鞏固已有知識、互相觀察學習、及嘗試改良，' +
+          '完成任務。於課堂的結束階段更會有幼兒回饋，成品展示。課堂主題包括：',
+          cObjectives: [
+            '堅固的房子-三隻小豬：透過故事作為引入，延伸到堅固的房子的主題。三隻小豬當中的主角的房屋被風吹倒，但為什麼呢?透過本次的工作坊能讓幼兒學習堆砌堅固房子的方法。' +
+            '透過工作坊幼兒能學習堆砌堅固房子模型的方法、培養幼兒的合作精神及動手製作技巧',
+            '裁培「彩色怪獸」：透過故事作為引入，延伸到有關顏色主題。進行有關顏色的創意實驗。透過本次的工作坊能讓幼兒嘗試顏色的實驗以及視覺藝術創作。' +
+            '透過工作坊幼兒能學習混色技巧、辨認不同情緒所代表的顏色、培養創意能力',
+            '浮沉世界-造船大挑戰：透過故事作為引入，先創作船的設計圖，再行動製作出來。延伸到如何令船在水中浮起來呢?透過本次的工作坊能讓幼兒學習令船浮起甚至在水中行動的方法。' +
+            '透過工作坊幼兒能學習令船浮起的方法、培養幼兒的合作精神及動手製作技巧',
+          ],
+          location: commonAddress.spk,
+          needComputer: false,
+          paymentButton: $sce.trustAsHtml('<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n' +
+            '<input type="hidden" name="cmd" value="_s-xclick">\n' +
+            '<input type="hidden" name="hosted_button_id" value="8E8LFP82JDTXE">\n' +
+            '<table>\n' +
+            '<tr><td><input type="hidden" name="charset" value="utf-8"><input type="hidden" name="on0" value="日期">日期</td></tr><tr><td><select name="os0">\n' +
+            '\t<option value="2018年9月22, 29日、10月6, 13, 20, 27日">2018年9月22, 29日、10月6, 13, 20, 27日 $800.00 HKD</option>\n' +
+            '</select> </td></tr>\n' +
+            '<tr><td><input type="hidden" name="charset" value="utf-8"><input type="hidden" name="on1" value="聯絡電話">聯絡電話</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>\n' +
+            '</table>\n' +
+            '<input type="hidden" name="currency_code" value="HKD">\n' +
+            '<input type="image" src="https://www.paypalobjects.com/en_GB/HK/i/btn/btn_buynowCC_LG_wCUP.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">\n' +
+            '<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">\n' +
+            '</form>\n'),
+          classes: [
+            {
+              idName: '班別一',
+              eIdName: 'Class 1',
+              date: '2018年9月22, 29日、10月6, 13, 20, 27日（共六堂）',
+              eDate: '15,22,29 Sept, 2018',
+              time: '10:00am-11:15am',
+              location: commonAddress.spk
+            }
+          ]
+        },
+
       ]
     };
 
