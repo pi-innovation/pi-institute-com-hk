@@ -34,7 +34,7 @@ angular.module('piApp.controllers')
         eName: 'mBot Workshop in 3 hours',
         cMaterial: 'mBot',
         eMaterial: 'mBot',
-        age: '8-12',
+        age: '7-12',
         fee: 'HKD 450',
         efee: 'HKD 450',
         cIntro: "三小時的mBot機械人體驗日適合對編程及機械人適合入門學生參加。工作坊內，小朋友可體驗學習程式編寫(Programming)，命令mBot機械人完成各種不同的任務及比賽！今次工作坊將以任務及比賽形式進行，" +
@@ -45,6 +45,7 @@ angular.module('piApp.controllers')
           '變數及運算思維 (Variables and computations)\n'
         ],
         location: commonAddress.spk,
+        needComputer: true,
         paymentButton: $sce.trustAsHtml('<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n' +
           '<input type="hidden" name="cmd" value="_s-xclick">\n' +
           '<input type="hidden" name="hosted_button_id" value="KJPLJRQVE2Y2Q">\n' +
@@ -94,7 +95,7 @@ angular.module('piApp.controllers')
           eName: 'mBot Day Camp in 6 hours',
           cMaterial: 'mBot',
           eMaterial: 'mBot',
-          age: '8-12',
+          age: '7-12',
           fee: 'HKD 1200 (已包租借機械人費用，或可加HKD700購買全新mBot機械人套件)',
           efee: 'HKD 1200 (Fees included borrowing mBot kit, or extra HKD700 for a brand new set of mBot kit)',
           cIntro: '想帶給小朋友既輕鬆又充實的週末，就不容錯過今次「六小時mBot機械人工作坊」！由導師精心設計的工作坊內，小朋友除了要一展自己的組裝技巧，更需要學習程式編寫(Programming)，命令mBot機械人完成各種不同的任務及比賽！\n今次工作坊將以任務及比賽形式進行，\n' +
@@ -107,6 +108,7 @@ angular.module('piApp.controllers')
             '動手製作技巧(Hands-on skill)',
           ],
           location: commonAddress.spk,
+          needComputer: true,
           paymentButton: $sce.trustAsHtml('<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n' +
             '<input type="hidden" name="cmd" value="_s-xclick">\n' +
             '<input type="hidden" name="hosted_button_id" value="3VKQCZDTYC2FA">\n' +
@@ -155,9 +157,9 @@ angular.module('piApp.controllers')
           image: 'rescue.png',
           cName: 'STEM災難拯救隊',
           eName: 'STEM Rescue Team',
-          cMaterial: 'mBot',
-          eMaterial: 'mBot',
-          age: '8-12',
+          cMaterial: '積木、實驗器材等',
+          eMaterial: 'LEGO Bricks and Experiment Kits',
+          age: '7-12',
           fee: 'HKD 600 (已包材料費)',
           efee: 'HKD 600 (Materials included)',
           cIntro: '子女對科學不感興趣? 「STEM災難拯救隊系列」課程將帶給你子女完全不同的科學學習體驗!課程將以不同情景及專題作為主導，\n' +
@@ -172,6 +174,7 @@ angular.module('piApp.controllers')
             '拯救海上漏油小先鋒：為何石油泄漏的事故會對自然生態造成巨大災害? 油本身的特質如何破壞環境?透過課程與實驗，同學將學習 並深入討論海上漏油事故的補救方法。',
           ],
           location: commonAddress.spk,
+          needComputer: false,
           paymentButton: $sce.trustAsHtml('<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n' +
             '<input type="hidden" name="cmd" value="_s-xclick">\n' +
             '<input type="hidden" name="hosted_button_id" value="NSTRCVS6JRFW6">\n' +
@@ -195,7 +198,7 @@ angular.module('piApp.controllers')
               location: commonAddress.spk
             }
           ]
-        },
+        }
       ]
     };
 
