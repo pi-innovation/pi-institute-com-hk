@@ -116,8 +116,12 @@ angular.module('piApp.controllers')
             '<tr><td><input type="hidden" name="charset" value="utf-8"><input type="hidden" name="on0" value="日期">日期</td></tr><tr><td><select name="os0">\n' +
             '\t<option value="2018年9月15日(借用機械人)">2018年9月15日(借用機械人) $1,200.00 HKD</option>\n' +
             '\t<option value="2018年9月16日(借用機械人)">2018年9月16日(借用機械人) $1,200.00 HKD</option>\n' +
+            '\t<option value="2018年10月20日(借用機械人)">2018年10月20日(借用機械人) $1,200.00 HKD</option>\n' +
+            '\t<option value="2018年10月21日(借用機械人)">2018年10月21日(借用機械人) $1,200.00 HKD</option>\n' +
             '\t<option value="2018年9月15日(購買機械人)">2018年9月15日(購買機械人) $1,900.00 HKD</option>\n' +
             '\t<option value="2018年9月16日(購買機械人)">2018年9月16日(購買機械人) $1,900.00 HKD</option>\n' +
+            '\t<option value="2018年10月20日(購買機械人)">2018年10月20日(購買機械人) $1,900.00 HKD</option>\n' +
+            '\t<option value="2018年10月21日(購買機械人)">2018年10月21日(購買機械人) $1,900.00 HKD</option>\n' +
             '</select> </td></tr>\n' +
             '<tr><td><input type="hidden" name="charset" value="utf-8"><input type="hidden" name="on1" value="聯絡電話">聯絡電話</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>\n' +
             '</table>\n' +
@@ -138,6 +142,22 @@ angular.module('piApp.controllers')
               idName: '班別二',
               eIdName: 'Class 2',
               date: '2018年9月16日',
+              eDate: '16th Sept, 2018',
+              time: '9:30am-4:30pm(12:30pm-1:30pm午膳)',
+              location: commonAddress.spk
+            },
+            {
+              idName: '班別三',
+              eIdName: 'Class 3',
+              date: '2018年10月20日',
+              eDate: '15th Sept, 2018',
+              time: '9:30am-4:30pm(12:30pm-1:30pm午膳)',
+              location: commonAddress.spk
+            },
+            {
+              idName: '班別四',
+              eIdName: 'Class 4',
+              date: '2018年10月21日',
               eDate: '16th Sept, 2018',
               time: '9:30am-4:30pm(12:30pm-1:30pm午膳)',
               location: commonAddress.spk
