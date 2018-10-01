@@ -12,8 +12,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="../assets/js/piApp.js"></script>
     <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/courses.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110577620-1"></script>
+
     <script>
       window.dataLayer = window.dataLayer || []
 
@@ -124,325 +126,116 @@
     <div class="container g-pt-50">
         <div class="row justify-content-center text-center">
             <div class="col-lg-8">
-                <h2 class="h1 g-color-black g-font-weight-600 mb-0">我們為學校提供一系列
+                <h2 class="h1 g-color-black g-font-weight-600 mb-0">我們為學生設計了一系列
                     <span class="d-inline-block g-brd-bottom g-brd-2 g-brd-primary g-color-primary">富趣味</span> 及
-                    <span class="d-inline-block g-brd-bottom g-brd-2 g-brd-primary g-color-primary">具教育意義</span>  的STEM課程及活動。亦可為學校
-                    <span class="d-inline-block g-brd-bottom g-brd-2 g-brd-primary g-color-primary">度身訂造</span>其他活動及課程。
+                    <span class="d-inline-block g-brd-bottom g-brd-2 g-brd-primary g-color-primary">具教育意義</span>的STEM課程。課程可組合成不同的
+                    <span class="d-inline-block g-brd-bottom g-brd-2 g-brd-primary g-color-primary">學習路徑</span>，因材施教，滿足不同學生的學習目標。
                 </h2>
             </div>
         </div>
-        <div class="row justify-content-center text-center g-pt-20">
+        <div class="row justify-content-center text-center g-pt-20 hidden-sm-down">
+            <div class="col-lg-8">
+                <a class="btn u-btn-primary g-brd-2 g-font-weight-700 g-font-size-13 g-rounded-50 g-py-15 g-px-30 g-mr-50" href="https://medium.com/pi-innovation" target="_blank">按此查閱過往專案</a>
+                <a class="btn u-btn-primary g-brd-2 g-font-weight-700 g-font-size-13 g-rounded-50 g-py-15 g-px-30" href="../assets/doc/learning_path.pdf" target="_blank">按此查閱建議學習路徑</a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center text-center g-pt-20 hidden-sm-up">
             <div class="col-lg-8">
                 <a class="btn u-btn-primary g-brd-2 g-font-weight-700 g-font-size-13 g-rounded-50 g-py-15 g-px-30" href="https://medium.com/pi-innovation" target="_blank">按此查閱過往專案</a>
             </div>
         </div>
 
+        <div class="row justify-content-center text-center g-pt-20 hidden-sm-up">
+            <div class="col-lg-8">
+                <a class="btn u-btn-primary g-brd-2 g-font-weight-700 g-font-size-13 g-rounded-50 g-py-15 g-px-30" href="../assets/doc/learning_path.pdf" target="_blank">按此查閱建議學習路徑</a>
+            </div>
+        </div>
+
     </div>
 
-    <!-- About Our Company -->
-    <section class="1g-bg-secondary g-py-30 g-pb-30">
+    <section class="g-mb-100 g-mt-50" ng-controller="CoursesController as courses" ng-cloak>
         <div class="container">
-            <!--<div class="row">-->
-                <!--<div class="col-lg-6 align-self-center g-mb-0&#45;&#45;lg">-->
-                    <!--<header class="u-heading-v2-3&#45;&#45;bottom g-brd-primary g-mb-20">-->
-                        <!--<h1 class="h2 u-heading-v2__title g-color-gray-dark-v2 g-font-weight-600 text-uppercase">-->
-                            <!--學校課程</h1>-->
-                    <!--</header>-->
-                <!--</div>-->
-            <!--</div>-->
+            <div class="row">
+                <!-- Profile Sidebar -->
+                <div class="col-lg-3 g-mb-50 g-mb-0--lg hidden-sm-down">
 
-            <div class="row" style="margin-bottom: 50px;">
-                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
-                    <article class="u-shadow-v21 u-shadow-v21--hover g-transition-0_3">
-                        <img class="img-fluid w-100 g-rounded-top-5"
-                             src="../assets/banner/robotics-foundations.png"
-                             alt="人工智能機械人基礎課程">
-                        <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
+                    <!-- Sidebar Navigation -->
+                    <div class="list-group list-group-border-0 g-mb-40">
 
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                人工智能機械人基礎
-                            </h2>
+                        <!-- Profile -->
+                        <div href="" class="list-group-item list-group-item-action justify-content-between">
+                            <span><input type="checkbox" ng-model="courses.display[0]" class="g-mr-10">等級一</span>
+                            <span class="u-label g-font-size-11 g-bg-blue g-rounded-20 g-px-10">3</span>
+                        </div>
+                        <!-- End Profile -->
 
+                        <!-- Users Contacts -->
+                        <div href="" class="list-group-item list-group-item-action justify-content-between">
+                            <span><input type="checkbox" ng-model="courses.display[1]" class="g-mr-10">等級二</span>
+                            <span class="u-label g-font-size-11 g-bg-blue g-rounded-20 g-px-10">3</span>
+                        </div>
+                        <!-- End Users Contacts -->
 
-                            <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                <li class="list-inline-item mr-0">課程教材</li>
-                            </ul>
+                        <!-- My Projects -->
+                        <div href="" class="list-group-item list-group-item-action justify-content-between">
+                            <span><input type="checkbox" ng-model="courses.display[2]" class="g-mr-10">等級三</span>
+                            <span class="u-label g-font-size-11 g-bg-blue g-rounded-20 g-px-10">3</span>
+                        </div>
+                        <!-- End My Projects -->
 
-                            <ul class="list-inline g-font-size-16 mb-0">
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    mBot
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Lego
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Thymio
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    中嗚
+                        <!-- Comments -->
+                        <div href="" class="list-group-item list-group-item-action justify-content-between">
+                            <span><input type="checkbox" ng-model="courses.display[3]" class="g-mr-10">等級四</span>
+                            <span class="u-label g-font-size-11 g-bg-blue g-rounded-20 g-px-10">4</span>
+                        </div>
+                        <!-- End Comments -->
+
+                    </div>
+                    <!-- End Sidebar Navigation -->
+
+                </div>
+                <!-- End Profile Sidebar -->
+
+                <!-- Profle Content -->
+                <div class="col-lg-9">
+                    <!-- Latest Projects Panel -->
+                    <div class="card border-0 g-mb-40" ng-repeat="level in courses.courses" ng-if="courses.display[level.level-1]">
+                        <!-- Panel Header -->
+                        <div class="card-header d-flex align-items-center justify-content-between g-bg-gray-light-v5 border-0 g-mb-15">
+                            <h3 class="h6 mb-0">
+                                <i class="icon-layers g-pos-rel g-top-1 g-mr-5"></i>等級{{level.level}}課程</small>
+                            </h3>
+                        </div>
+                        <!-- End Panel Header -->
+
+                        <!-- Panel Body -->
+                        <div class=" u-info-v1-1 g-pa-0" ng-repeat="courseObj in level.courses">
+                            <ul class="list-unstyled">
+                                <li class="media g-brd-around g-brd-gray-light-v4 g-brd-left-3 g-brd-blue-left rounded g-pa-20 g-mb-10">
+                                    <div class="d-flex g-mt-2 g-mr-15">
+                                        <img class="g-width-40 g-height-40" ng-src="../assets/img/courseIcons/{{courseObj.icon}}" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="h6 g-font-weight-600 g-color-black">{{courseObj.id}} - {{courseObj.name}}</h5>
+                                        </div>
+                                        <p>{{courseObj.intro}}</p>
+                                        <span class="u-label u-label--sm g-bg-gray-light-v4 g-color-main g-rounded-20 g-px-10" ng-repeat="skill in courseObj.skills">{{skill}}</span>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
-                    </article>
+                        <!-- End Panel Body -->
+                    </div>
+                    <!-- End Latest Projects Panel -->
+
+
                 </div>
-
-                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
-                    <article class="u-shadow-v21 u-shadow-v21--hover g-transition-0_3">
-                        <img class="img-fluid w-100 g-rounded-top-5"
-                             src="../assets/banner/mechanical-robot.png" alt="線控機械人課程">
-                        <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                線控機械人
-                            </h2>
-
-                            <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                <li class="list-inline-item mr-0">課程教材</li>
-                            </ul>
-
-                            <ul class="list-inline g-font-size-16 mb-0">
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    雙星 Tamiya
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    訂制機械人套件
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <article class="u-shadow-v21 u-shadow-v21--hover g-transition-0_3">
-                        <img class="img-fluid w-100 g-rounded-top-5"
-                             src="../assets/banner/3ddesignprint.png" alt="3D 立體設計及打印課程">
-                        <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                3D 立體設計及打印
-                            </h2>
-
-                            <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                <li class="list-inline-item mr-0">課程教材</li>
-                            </ul>
-
-                            <ul class="list-inline g-font-size-16 mb-0">
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    UP mini
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Makerbot
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-
+                <!-- End Profle Content -->
             </div>
-
-            <div class="row" style="margin-bottom: 50px;">
-                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
-                    <article class="u-shadow-v21 u-shadow-v21--hover g-transition-0_3">
-                        <img class="img-fluid w-100 g-rounded-top-5"
-                             src="../assets/banner/microbit.png"
-                             alt="智能生活發明 (Maker)課程">
-                        <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                智能生活發明 (Maker)
-                            </h2>
-
-
-                            <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                <li class="list-inline-item mr-0">課程教材</li>
-                            </ul>
-
-                            <ul class="list-inline g-font-size-16 mb-0">
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Micro:bit
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Arduino
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
-                    <article class="u-shadow-v21 u-shadow-v21--hover g-transition-0_3">
-                        <img class="img-fluid w-100 g-rounded-top-5"
-                             src="../assets/banner/codinggalaxy.png" alt="Coding Galaxy 編程入門課程">
-                        <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                Coding Galaxy 編程入門
-                            </h2>
-
-                            <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                <li class="list-inline-item mr-0">課程教材</li>
-                            </ul>
-
-                            <ul class="list-inline g-font-size-16 mb-0">
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    網龍科技 Coding Galaxy App
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6">
-                    <article class="u-shadow-v21 u-shadow-v21--hover g-transition-0_3">
-                        <img class="img-fluid w-100 g-rounded-top-5"
-                             src="../assets/banner/interdisciplinary.png" alt="跨學科實驗課程">
-                        <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                跨學科實驗課程
-                            </h2>
-
-                            <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                <li class="list-inline-item mr-0">課程教材</li>
-                            </ul>
-
-                            <ul class="list-inline g-font-size-16 mb-0">
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    mBot
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    環保材料
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    實驗室儀器
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-
-            </div>
-
-            <div class="row" style="margin-bottom: 50px;">
-                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
-                    <article class="u-shadow-v21 u-shadow-v21--hover g-transition-0_3">
-                        <img class="img-fluid w-100 g-rounded-top-5"
-                             src="../assets/banner/advanced-robotics.png" alt="人工智能機械人進階課程">
-                        <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                人工智能機械人進階
-                            </h2>
-
-                            <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                <li class="list-inline-item mr-0">課程教材</li>
-                            </ul>
-
-                            <ul class="list-inline g-font-size-16 mb-0">
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    mBot
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Lego
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    中嗚
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Arduino
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
-                    <article class="u-shadow-v21 u-shadow-v21--hover g-transition-0_3">
-                        <img class="img-fluid w-100 g-rounded-top-5"
-                             src="../assets/banner/bigdata.png"
-                             alt="大數據分析體驗課程">
-                        <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                大數據分析體驗
-                            </h2>
-
-                            <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                <li class="list-inline-item mr-0">課程教材</li>
-                            </ul>
-
-                            <ul class="list-inline g-font-size-16 mb-0">
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Tableau
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Excel
-                                </li>
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Kaggle
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
-                    <article class="u-shadow-v21 u-shadow-v21--hover g-transition-0_3">
-                        <img class="img-fluid w-100 g-rounded-top-5"
-                             src="../assets/banner/machinelearning.png" alt="機器學習(Machine Learning)基礎課程">
-                        <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                機器學習基礎
-                            </h2>
-
-                            <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                <li class="list-inline-item mr-0">課程教材</li>
-                            </ul>
-
-                            <ul class="list-inline g-font-size-16 mb-0">
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    Python
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-
-
-            </div>
-
-            <div class="row" style="margin-bottom: 50px;">
-                <div class="col-lg-4 col-md-6 g-mb-30 g-mb-0--lg">
-                    <article class="u-shadow-v21 u-shadow-v21--hover g-transition-0_3">
-                        <img class="img-fluid w-100 g-rounded-top-5"
-                             src="../assets/banner/business-sim.png" alt="商業模擬實驗課程">
-                        <div class="g-bg-white g-pa-30 g-rounded-bottom-5">
-
-                            <h2 class="h5 g-color-black g-font-weight-600 mb-4">
-                                商業模擬實驗
-                            </h2>
-
-                            <ul class="list-inline g-color-gray-dark-v4 g-font-weight-600 g-font-size-16 mb-0">
-                                <li class="list-inline-item mr-0">課程教材</li>
-                            </ul>
-
-                            <ul class="list-inline g-font-size-16 mb-0">
-                                <li class="list-inline-item g-mb-10" style="padding-bottom: 5px">
-                                    CAPSIM
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-
-            </div>
-
         </div>
     </section>
-    <!-- End About Our Company -->
 
 
     <!-- Copyright Footer -->
