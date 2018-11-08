@@ -103,14 +103,6 @@
                             <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items" ng-class="{'hidden-sm-up': item.mobileOnly}">
                                 <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)" target="{{item.openInBlank ? '_blank' : '_self'}}">{{item.cName}}</a>
                             </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a ng-href="../tc/{{currentItem()}}"
-                                   class="nav-link g-py-7 g-px-0 lang-select-link" ng-class="getClassForLang('tc')">中</a>
-                                <span class="nav-link g-py-7 g-px-0 lang-select-link">/</span>
-                                <a ng-href="../en/{{currentItem()}}"
-                                   class="nav-link g-py-7 g-px-0 lang-select-link" ng-class="getClassForLang('en')">EN</a>
-                            </li>
                         </ul>
                     </div>
                     <!-- End Navigation -->

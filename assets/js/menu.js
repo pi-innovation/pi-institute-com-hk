@@ -10,41 +10,44 @@ angular.module('piApp.controllers')
         mobileOnly: false,
       },
       {
-        cName: '家長專區',
+        cName: '自訂課堂',
+        eName: 'Parents',
+        link: 'https://pi-innovation.typeform.com/to/AdPLdJ',
+        mobileOnly: false,
+        openInBlank: true,
+      },
+      {
+        cName: '課程時間',
         eName: 'Parents',
         link: 'parents.html',
         mobileOnly: false,
       },
       {
-        cName: '學校課程',
-        eName: 'Schools',
+        cName: '課程架構',
+        eName: 'Courses',
         link: 'course.html',
         mobileOnly: false,
+      },{
+        cName: '學習路徑',
+        eName: 'Learning Path',
+        link: '../assets/doc/learning_path.pdf',
+        mobileOnly: false,
+        openInBlank: true,
       }, {
-        cName: '資歷及佳績',
+        cName: '導師資歷',
         eName: 'Qualifications',
         link: 'achievement.html',
         mobileOnly: false,
       }, {
-        cName: '過往專案',
-        eName: 'Portfolio',
+        cName: '課程花絮',
+        eName: 'Past Courses',
         link: 'https://medium.com/pi-innovation',
-        mobileOnly: true,
-        openInBlank: true
-      }, {
-        cName: '客戶／合作夥伴',
-        eName: 'Clients & Partners',
-        link: 'partners.html',
         mobileOnly: false,
+        openInBlank: true
       }, {
         cName: '聯絡我們',
         eName: 'Contact',
         link: 'contact.html',
-        mobileOnly: false,
-      }, {
-        cName: '加入我們',
-        eName: 'Join Us',
-        link: 'joinus.html',
         mobileOnly: false,
       }
     ];

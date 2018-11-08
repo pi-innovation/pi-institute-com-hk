@@ -105,14 +105,6 @@
                             <li class="nav-item g-mx-10--lg g-mx-15--xl" ng-repeat="item in menuItems.items" ng-class="{'hidden-sm-up': item.mobileOnly}">
                                 <a ng-href="{{item.link}}" class="nav-link g-py-7 g-px-0" ng-class="getClassForItem(item.link)" target="{{item.openInBlank ? '_blank' : '_self'}}">{{item.cName}}</a>
                             </li>
-
-                            <li class="nav-item g-mx-10--lg g-mx-15--xl">
-                                <a ng-href="../tc/{{currentItem()}}"
-                                   class="nav-link g-py-7 g-px-0 lang-select-link" ng-class="getClassForLang('tc')">中</a>
-                                <span class="nav-link g-py-7 g-px-0 lang-select-link">/</span>
-                                <a ng-href="../en/{{currentItem()}}"
-                                   class="nav-link g-py-7 g-px-0 lang-select-link" ng-class="getClassForLang('en')">EN</a>
-                            </li>
                         </ul>
                     </div>
                     <!-- End Navigation -->
@@ -202,7 +194,7 @@
                     <!-- Latest Projects Panel -->
                     <div class="card border-0 g-mb-40" ng-repeat="level in courses.courses" ng-if="courses.display[level.level-1]">
                         <!-- Panel Header -->
-                        <div class="card-header d-flex align-items-center justify-content-between g-bg-gray-light-v5 border-0 g-mb-15">
+                        <div ng-attr-id="{{ 'level' + level.level }}" class="card-header d-flex align-items-center justify-content-between g-bg-gray-light-v5 border-0 g-mb-15">
                             <h3 class="h6 mb-0">
                                 <i class="icon-layers g-pos-rel g-top-1 g-mr-5"></i>等級{{level.level}}課程</small>
                             </h3>

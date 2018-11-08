@@ -92,7 +92,7 @@ angular.module('piApp.controllers')
             name: '基礎機械人工程師',
             eName: 'Robotics Fundamentals',
             intro: '同學們將會於這個課程中同時接觸硬件及軟件的知識。同學將會先動手組裝一台標準的機械人（可選擇mBot、Lego等各款的機械人），進行測試，其後同學將會針對導師安排的課堂比賽或活動，運用圖形化的編程介面，進行基礎編程，寫下人生的第一個機械人程式。',
-            intro: 'Students would be learning about both hardware and software in this program. The program will start with assembling and testing a standard learning robot (mBot, Lego etc.). ' +
+            eIntro: 'Students would be learning about both hardware and software in this program. The program will start with assembling and testing a standard learning robot (mBot, Lego etc.). ' +
             'Then they will be programming the robot with Graphical Programming Interface for various classroom competition/activities.',
             skills: ['電子學','機械人','工具運用','編程'],
             eSkills: ['Electronics','Robotics','Tools Usage','Coding'],
