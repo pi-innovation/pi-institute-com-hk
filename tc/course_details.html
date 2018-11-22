@@ -6,24 +6,13 @@
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W2ZZMFW');</script>
+    })(window,document,'script','dataLayer','GTM-5TLZGXW');</script>
     <!-- End Google Tag Manager -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="../assets/js/piApp.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/parents.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110577620-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-
-      function gtag () {dataLayer.push(arguments)}
-
-      gtag('js', new Date())
-
-      gtag('config', 'UA-110577620-1')
-    </script>
 
     <!-- Title -->
     <title>Pi Innovation | 校外課程</title>
@@ -65,7 +54,7 @@
 
   <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2ZZMFW"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TLZGXW"
                     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
     <main>
@@ -122,8 +111,7 @@
               </header>
 
               <p class="g-font-size-20">簡介</p>
-              <p class="g-font-size-14 g-mb-30">{{parents.course.cIntro}}
-              </p>
+              <p class="g-font-size-14 g-mb-30" ng-repeat="intro in parents.course.cIntro">{{intro}}</p>
 
               <ul class="list-unstyled g-color-gray-dark-v4 g-mb-30">
                 <li class="d-flex g-mb-10" ng-repeat="objective in parents.course.cObjectives">
@@ -134,7 +122,9 @@
               <p class="g-font-size-14 g-mb-30">{{parents.course.age}}</p>
 
               <p class="g-font-size-20">上課地點</p>
-              <p class="g-font-size-14 g-mb-30">{{parents.course.location.cName}}</p>
+              <ul>
+                <li class="g-font-size-14" ng-repeat="l in parents.course.location">{{l.cName}}</li>
+              </ul>
 
               <p class="g-font-size-20" ng-if="parents.course.needComputer">注意事項</p>
               <p class="g-font-size-14 g-mb-30" ng-if="parents.course.needComputer">學生需自備手提電腦(Windows或Mac系統均可)</p>
@@ -152,7 +142,7 @@
                     <ul class="list-inline g-font-size-16 mb-0">
                       <li class="list-inline-item g-mb-10 card-small-text"
                           style="padding-bottom: 5px">
-                        <p ng-repeat="class in parents.course.classes">{{class.idName}}<br>{{class.date}}<br>{{class.time}}</p>
+                        <p ng-repeat="class in parents.course.classes">{{class.idName}}（{{class.location.district}}）<br>{{class.date}}<br>{{class.time}}</p>
                       </li>
                     </ul>
 
